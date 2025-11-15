@@ -182,6 +182,34 @@ body {
         display: flex !important;
     }
 
+    /* PC 버전 선택 시 네비게이션 메뉴는 가로로 강제 */
+    body.desktop-view .nav-menu {
+        flex-direction: row !important;
+        gap: 10px !important;
+        padding: 15px 0 !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+    }
+
+    body.desktop-view .nav-menu li {
+        width: auto !important;
+        padding: 0 !important;
+    }
+
+    body.desktop-view .nav-menu li a {
+        display: inline-block !important;
+        padding: 5px 6px !important;
+        border-bottom: none !important;
+        width: auto !important;
+        font-size: 12px !important;
+        white-space: nowrap !important;
+    }
+
+    body.desktop-view .nav-menu li a:hover {
+        background-color: transparent !important;
+        color: #2d5016 !important;
+    }
+
     .nav-menu {
         display: flex;
         flex-direction: column;
@@ -561,15 +589,24 @@ body.desktop-view .navigation {
 
 body.desktop-view .nav-menu {
     flex-direction: row !important;
-    gap: 15px !important;
+    gap: 12px !important;
     padding: 15px 0 !important;
     flex-wrap: wrap !important;
+    justify-content: center !important;
+}
+
+body.desktop-view .nav-menu li {
+    width: auto !important;
+    padding: 0 !important;
 }
 
 body.desktop-view .nav-menu li a {
-    font-size: 13px !important;
-    padding: 5px 8px !important;
+    font-size: 12px !important;
+    padding: 5px 6px !important;
     white-space: nowrap !important;
+    display: inline-block !important;
+    border-bottom: none !important;
+    width: auto !important;
 }
 
 body.desktop-view .hamburger-menu {
