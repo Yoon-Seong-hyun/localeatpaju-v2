@@ -4349,3 +4349,97 @@ body {
     }
 }
 
+/* Campsite Section Styles */
+.campsite-bbq-kit {
+    background-color: #f0f8f0;
+    border-left: 4px solid #2d5016;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.bbq-kit-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d5016;
+    margin-bottom: 10px;
+}
+
+.farmer-link-inline {
+    color: #2d5016;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.farmer-link-inline:hover {
+    color: #1a3009;
+    text-decoration: underline;
+}
+
+/* Cross Promotion Section Styles */
+.cross-promotion-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.cross-promotion-box {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cross-promotion-title {
+    font-size: 28px;
+    color: #2d5016;
+    margin-bottom: 15px;
+}
+
+.cross-promotion-text {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.btn-cross-promotion {
+    display: inline-block;
+    background-color: #2d5016;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-cross-promotion:hover {
+    background-color: #1a3009;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(45, 80, 22, 0.3);
+}
+
+/* Responsive Styles for Cross Promotion */
+@media (max-width: 768px) {
+    .cross-promotion-section {
+        padding: 40px 0;
+    }
+
+    .cross-promotion-box {
+        padding: 30px 20px;
+    }
+
+    .cross-promotion-title {
+        font-size: 24px;
+    }
+
+    .cross-promotion-text {
+        font-size: 16px;
+    }
+}
+
