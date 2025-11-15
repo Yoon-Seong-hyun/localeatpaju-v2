@@ -194,29 +194,19 @@ body {
     }
 }
 
-/* Weather Banner */
-.weather-banner {
-    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-    color: #1a3009;
-    text-align: center;
-    padding: 10px 20px;
-    font-weight: 500;
+/* Nav Weather Widget */
+.nav-weather {
     font-size: 0.9em;
-    border-bottom: 2px solid #2d5016;
-    position: relative;
-    z-index: 1001;
+    color: #005f00;
+    align-self: center;
+    margin-left: 20px;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
-.weather-banner strong {
-    color: #2d5016;
-    font-weight: 700;
-}
-
-@media (max-width: 768px) {
-    .weather-banner {
-        font-size: 0.8em;
-        padding: 8px 15px;
-        line-height: 1.4;
+@media (max-width: 992px) {
+    .nav-weather {
+        display: none; /* 모바일에서는 숨김 */
     }
 }
 
