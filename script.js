@@ -64,18 +64,33 @@ document.addEventListener('DOMContentLoaded', function() {
     const navigation = document.querySelector('.navigation');
     
     if (hamburgerMenu && navigation) {
+        // PC 버전이 아닐 때만 햄버거 메뉴 작동
         hamburgerMenu.addEventListener('click', function(e) {
             e.stopPropagation();
-            hamburgerMenu.classList.toggle('active');
-            navigation.classList.toggle('active');
+            
+            // PC 버전 모드가 아닐 때만 토글
+            if (!document.body.classList.contains('desktop-view')) {
+                hamburgerMenu.classList.toggle('active');
+                navigation.classList.toggle('active');
+                
+                // active 클래스가 추가되면 display: block으로 변경
+                if (navigation.classList.contains('active')) {
+                    navigation.style.display = 'block';
+                } else {
+                    navigation.style.display = 'none';
+                }
+            }
         });
 
         // Close menu when clicking on a link
         const navLinks = navigation.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
-                hamburgerMenu.classList.remove('active');
-                navigation.classList.remove('active');
+                if (!document.body.classList.contains('desktop-view')) {
+                    hamburgerMenu.classList.remove('active');
+                    navigation.classList.remove('active');
+                    navigation.style.display = 'none';
+                }
             });
         });
 
@@ -84,9 +99,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const isClickInsideNav = navigation.contains(event.target);
             const isClickOnHamburger = hamburgerMenu.contains(event.target);
             
-            if (!isClickInsideNav && !isClickOnHamburger && navigation.classList.contains('active')) {
-                hamburgerMenu.classList.remove('active');
-                navigation.classList.remove('active');
+            if (!document.body.classList.contains('desktop-view')) {
+                if (!isClickInsideNav && !isClickOnHamburger && navigation.classList.contains('active')) {
+                    hamburgerMenu.classList.remove('active');
+                    navigation.classList.remove('active');
+                    navigation.style.display = 'none';
+                }
             }
         });
     }
