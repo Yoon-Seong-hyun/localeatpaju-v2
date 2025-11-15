@@ -4464,3 +4464,122 @@ body {
     }
 }
 
+/* Farewell Paju Section Styles */
+.farewell-theme-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.farewell-theme-section.farewell-theme-alt {
+    background-color: #f8f9fa;
+}
+
+.farewell-theme-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.farewell-theme-title {
+    font-size: 32px;
+    color: #2d5016;
+    margin-bottom: 10px;
+}
+
+.farewell-theme-subtitle {
+    font-size: 18px;
+    color: #666;
+}
+
+.farewell-card {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.farewell-card-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.farewell-card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.farewell-card-content {
+    flex: 1;
+}
+
+.farewell-card-title {
+    font-size: 24px;
+    color: #2d5016;
+    margin-bottom: 15px;
+}
+
+.farewell-card-desc {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.farewell-tip {
+    background-color: #fff9e6;
+    border-left: 4px solid #ffc107;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.tip-text {
+    margin: 0;
+    color: #856404;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Responsive Styles for Farewell Section */
+@media (max-width: 992px) {
+    .farewell-card {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .farewell-card-image {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .farewell-theme-section {
+        padding: 40px 0;
+    }
+
+    .farewell-theme-title {
+        font-size: 28px;
+    }
+
+    .farewell-theme-subtitle {
+        font-size: 16px;
+    }
+
+    .farewell-card {
+        padding: 20px;
+    }
+
+    .farewell-card-title {
+        font-size: 20px;
+    }
+
+    .farewell-card-desc {
+        font-size: 14px;
+    }
+}
+
