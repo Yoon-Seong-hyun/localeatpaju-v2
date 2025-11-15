@@ -488,6 +488,69 @@ body {
     opacity: 0.8;
 }
 
+/* Version Toggle (모바일 전용) */
+.version-toggle {
+    display: none; /* 기본적으로 숨김 */
+    text-align: center;
+    padding: 15px 20px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #e0e0e0;
+}
+
+.version-link {
+    color: #2d5016;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.version-link:hover {
+    color: #1a3009;
+    text-decoration: underline;
+}
+
+.version-divider {
+    color: #999;
+    margin: 0 5px;
+}
+
+/* Desktop View Mode (강제 데스크톱 스타일) */
+body.desktop-view {
+    min-width: 1200px;
+}
+
+body.desktop-view .container {
+    max-width: 1200px;
+}
+
+body.desktop-view .header-top {
+    flex-wrap: nowrap;
+}
+
+body.desktop-view .navigation {
+    display: flex !important;
+}
+
+body.desktop-view .hamburger-menu {
+    display: none !important;
+}
+
+/* 모바일에서만 버전 토글 표시 */
+@media (max-width: 992px) {
+    .version-toggle {
+        display: block;
+    }
+}
+
+/* 데스크톱에서는 버전 토글 숨김 */
+@media (min-width: 993px) {
+    .version-toggle {
+        display: none !important;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-top {

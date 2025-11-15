@@ -90,5 +90,43 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Version Toggle (PC/Mobile View)
+    const urlParams = new URLSearchParams(window.location.search);
+    const viewParam = urlParams.get('view');
+    
+    if (viewParam === 'desktop') {
+        document.body.classList.add('desktop-view');
+        localStorage.setItem('preferredView', 'desktop');
+    } else if (viewParam === 'mobile') {
+        document.body.classList.remove('desktop-view');
+        localStorage.setItem('preferredView', 'mobile');
+    } else {
+        // 저장된 선호도 불러오기
+        const preferredView = localStorage.getItem('preferredView');
+        if (preferredView === 'desktop') {
+            document.body.classList.add('desktop-view');
+        }
+    }
+
+    // Version toggle links
+    const desktopLink = document.getElementById('desktop-view-link');
+    const mobileLink = document.getElementById('mobile-view-link');
+    
+    if (desktopLink && mobileLink) {
+        const currentUrl = window.location.pathname;
+        
+        desktopLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const newUrl = currentUrl + '?view=desktop';
+            window.location.href = newUrl;
+        });
+        
+        mobileLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const newUrl = currentUrl + '?view=mobile';
+            window.location.href = newUrl;
+        });
+    }
 });
 
