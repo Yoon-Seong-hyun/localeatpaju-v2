@@ -168,6 +168,20 @@ body {
         z-index: 1000;
     }
 
+    /* PC 버전 선택 시 네비게이션은 가로로 유지 */
+    body.desktop-view .navigation {
+        position: static !important;
+        display: flex !important;
+        width: auto !important;
+        background-color: #f8f9fa !important;
+        box-shadow: none !important;
+    }
+
+    body.desktop-view .navigation.active {
+        position: static !important;
+        display: flex !important;
+    }
+
     .nav-menu {
         display: flex;
         flex-direction: column;
@@ -527,10 +541,21 @@ body.desktop-view .container {
 
 body.desktop-view .header-top {
     flex-wrap: nowrap;
+    flex-direction: row !important;
 }
 
 body.desktop-view .navigation {
     display: flex !important;
+    position: static !important;
+    width: auto !important;
+    background-color: #f8f9fa !important;
+    box-shadow: none !important;
+}
+
+body.desktop-view .nav-menu {
+    flex-direction: row !important;
+    gap: 40px !important;
+    padding: 15px 0 !important;
 }
 
 body.desktop-view .hamburger-menu {
@@ -567,6 +592,14 @@ body.desktop-view .hamburger-menu {
         flex-direction: column;
         gap: 15px;
         padding: 15px;
+    }
+
+    /* PC 버전 선택 시 네비게이션 메뉴는 가로로 유지 */
+    body.desktop-view .nav-menu {
+        flex-direction: row !important;
+        gap: 30px !important;
+        padding: 15px 0 !important;
+        justify-content: center !important;
     }
 
     .hero-title {
