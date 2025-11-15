@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로컬잇파주 | 파주 청년 농부의 신선함을 식탁까지</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -37,206 +39,150 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop&auto=format&q=80');">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">파주의 흙과 당신의 식탁, 그 모든 경험을 잇습니다</h1>
-            <p class="hero-subtitle">청년 농부들의 정성으로 키운 신선한 농산물을 직접 만나보세요</p>
-            <div class="hero-buttons">
-                <a href="experiences.html" class="btn-hero btn-hero-primary">농장 체험 신청하기</a>
-                <a href="products.html" class="btn-hero btn-hero-secondary">지금 만나는 작물</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 1: 오늘, 파주의 밭 (농부의 일지 피드) -->
-    <section class="home-farmer-log-section">
-        <div class="container">
-            <h2 class="section-title">오늘, 파주의 밭: 농부의 최신 일지</h2>
-            <div class="home-log-grid">
-                <!-- Log Card 1: 윤성현 -->
-                <article class="home-log-card">
-                    <div class="log-card-header">
-                        <div class="log-farmer-profile">
-                            <a href="farmer-profile.html" class="log-farmer-link">
-                                <img src="assets/images/yoon-seong-hyun.jpg" alt="윤성현 농부" class="log-farmer-avatar">
-                                <div class="log-farmer-info">
-                                    <h3 class="log-farmer-name">윤성현 농부</h3>
-                                    <span class="log-time">방금 전</span>
-                                </div>
-                            </a>
-                        </div>
+    <!-- Hero Section: 롤링 배너 (Swiper) -->
+    <section class="hero-slider">
+        <div class="swiper heroSwiper">
+            <div class="swiper-wrapper">
+                <!-- 배너 1: 농장 체험 -->
+                <div class="swiper-slide hero-slide" style="background-image: url('https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=1920&h=600&fit=crop&auto=format&q=80');">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content">
+                        <h1 class="hero-title">농부와 함께하는 특별한 하루</h1>
+                        <p class="hero-subtitle">파주의 흙을 직접 만지고, 농부의 이야기를 들어보세요</p>
+                        <a href="experiences.html" class="btn-hero btn-hero-primary">농장 체험 신청하기</a>
                     </div>
-                    <div class="log-card-body">
-                        <p class="log-content">
-                            오늘 첫서리가 내렸습니다. 밭을 둘러보는 중입니다. 올해 고구마는 더 달 것 같습니다.
-                        </p>
-                        <div class="log-image">
-                            <img src="https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?w=400&h=300&fit=crop&auto=format" alt="서리 내린 고구마 밭">
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Log Card 2: 이스마트 -->
-                <article class="home-log-card">
-                    <div class="log-card-header">
-                        <div class="log-farmer-profile">
-                            <a href="farmer-profile-lee.html" class="log-farmer-link">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&auto=format" alt="이스마트 농부" class="log-farmer-avatar">
-                                <div class="log-farmer-info">
-                                    <h3 class="log-farmer-name">이스마트 농부</h3>
-                                    <span class="log-time">1일 전</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="log-card-body">
-                        <p class="log-content">
-                            스마트팜 딸기 1차 선별 작업 완료! 당도 14브릭스 이상만 골라냈습니다.
-                        </p>
-                        <div class="log-image">
-                            <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=400&h=300&fit=crop&auto=format" alt="선별 중인 딸기 바구니">
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Log Card 3: 박열정 -->
-                <article class="home-log-card">
-                    <div class="log-card-header">
-                        <div class="log-farmer-profile">
-                            <a href="farmer-profile-park.html" class="log-farmer-link">
-                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=50&h=50&fit=crop&auto=format" alt="박열정 농부" class="log-farmer-avatar">
-                                <div class="log-farmer-info">
-                                    <h3 class="log-farmer-name">박열정 농부</h3>
-                                    <span class="log-time">2일 전</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="log-card-body">
-                        <p class="log-content">
-                            유기농 쌈채소 주문이 많아 행복한 비명을 지르고 있습니다! 감사합니다!
-                        </p>
-                        <div class="log-image">
-                            <img src="https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?w=400&h=300&fit=crop&auto=format" alt="포장 중인 쌈채소 박스">
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="section-footer">
-                <a href="farmer-log.html" class="btn-more">더보기...</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 2: 파주 1박 2일, 완벽한 주말 (경험 큐레이션) -->
-    <section class="home-experience-section">
-        <div class="container">
-            <h2 class="section-title">로컬잇파주 추천: 완벽한 파주 1박 2일</h2>
-            <div class="home-experience-grid">
-                <!-- Left Card: 농장 체험 -->
-                <a href="experiences.html" class="home-experience-card home-experience-day">
-                    <div class="home-experience-image">
-                        <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=800&h=600&fit=crop&auto=format" alt="농장 체험">
-                    </div>
-                    <div class="home-experience-overlay"></div>
-                    <div class="home-experience-content">
-                        <h3 class="home-experience-title">낮: 농부와 함께하는 특별한 하루</h3>
-                        <p class="home-experience-desc">파주의 흙을 직접 만지고, 농부의 이야기를 들어보세요.</p>
-                    </div>
-                </a>
-
-                <!-- Right Card: 별밤 캠핑 -->
-                <a href="campsites.html" class="home-experience-card home-experience-night">
-                    <div class="home-experience-image">
-                        <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&h=600&fit=crop&auto=format&q=80" alt="별밤 캠핑">
-                    </div>
-                    <div class="home-experience-overlay"></div>
-                    <div class="home-experience-content">
-                        <h3 class="home-experience-title">밤: 파주의 별밤, 감성 캠핑</h3>
-                        <p class="home-experience-desc">로컬잇파주가 엄선한 별밤 캠핑장에서 특별한 밤을 보내세요.</p>
-                    </div>
-                </a>
-            </div>
-            <div class="section-footer">
-                <a href="farewell-paju.html" class="btn-more">떠나는 명소 보러가기</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 3: 지금 가장 신선해요! (상품 목록) -->
-    <section id="products" class="products-section">
-        <div class="container">
-            <h2 class="section-title">지금 가장 신선해요!</h2>
-            <div class="products-grid">
-                <a href="product-detail.html" class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?w=400&h=400&fit=crop&auto=format" alt="파주 유기농 꿀 고구마">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">파주 유기농 꿀 고구마</h3>
-                        <p class="product-price">14,000원</p>
-                        <div class="product-farmer-info">
-                            <a href="farmer-profile.html" class="farmer-link" onclick="event.stopPropagation();">
-                                <img src="assets/images/yoon-seong-hyun.jpg" alt="윤성현 농부" class="farmer-avatar">
-                                <span class="farmer-name">윤성현 농부</span>
-                            </a>
-                        </div>
-                    </div>
-                </a>
-                <a href="product-detail.html" class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=400&h=400&fit=crop&auto=format" alt="파주 딸기">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">파주 스마트팜 딸기</h3>
-                        <p class="product-price">25,000원</p>
-                        <div class="product-farmer-info">
-                            <a href="farmer-profile-lee.html" class="farmer-link" onclick="event.stopPropagation();">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&auto=format" alt="이스마트 농부" class="farmer-avatar">
-                                <span class="farmer-name">이스마트 농부</span>
-                            </a>
-                        </div>
-                    </div>
-                </a>
-                <a href="product-detail.html" class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?w=400&h=400&fit=crop&auto=format" alt="신선 상추">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">유기농 모둠 상추</h3>
-                        <p class="product-price">12,000원</p>
-                        <div class="product-farmer-info">
-                            <a href="farmer-profile-park.html" class="farmer-link" onclick="event.stopPropagation();">
-                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&auto=format" alt="박열정 농부" class="farmer-avatar">
-                                <span class="farmer-name">박열정 농부</span>
-                            </a>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 4: 이달의 농부 (윤성현 농부) -->
-    <section id="farmers" class="farmer-section">
-        <div class="container">
-            <h2 class="section-title">이달의 농부: 윤성현 농부</h2>
-            <div class="farmer-card">
-                <div class="farmer-image">
-                    <img src="assets/images/yoon-seong-hyun.jpg" alt="윤성현 농부 사진">
                 </div>
-                <div class="farmer-info">
-                    <h3 class="farmer-name">윤성현 농부</h3>
-                    <p class="farmer-tagline">흙의 정직함을 믿는 쌀/고구마 장인</p>
-                    <p class="farmer-story">
-                        "안녕하세요, 로컬잇파주 대표 윤성현입니다. 파주에서 흙과 함께 정직한 땀을 흘리고 있는 청년 농부입니다. 
-                        도시에서의 바쁜 삶을 뒤로하고, 자연의 순리에 따라 건강한 먹거리를 키우는 일에 큰 보람을 느끼고 있습니다. 
-                        제가 키운 작물이 어떤 과정을 거쳐 식탁에 오르는지, 그리고 그 맛이 어떤지 직접 전달할 수 있다는 것이 농부로서 가장 큰 보람이에요."
-                    </p>
-                    <a href="farmer-profile.html" class="btn-farmer-detail">윤성현 농부 이야기 자세히 보기</a>
+                <!-- 배너 2: 별밤 캠핑 -->
+                <div class="swiper-slide hero-slide" style="background-image: url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1920&h=600&fit=crop&auto=format&q=80');">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content">
+                        <h1 class="hero-title">파주의 별밤, 감성 캠핑</h1>
+                        <p class="hero-subtitle">로컬잇파주가 엄선한 별밤 캠핑장에서 특별한 밤을 보내세요</p>
+                        <a href="campsites.html" class="btn-hero btn-hero-primary">별밤 캠핑 예약하기</a>
+                    </div>
                 </div>
+                <!-- 배너 3: 윤성현 농부의 정직한 쌀 -->
+                <div class="swiper-slide hero-slide" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=600&fit=crop&auto=format&q=80');">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content">
+                        <h1 class="hero-title">윤성현 농부의 정직한 쌀</h1>
+                        <p class="hero-subtitle">파주에서 정성껏 키운 유기농 쌀을 직접 만나보세요</p>
+                        <a href="product-detail.html" class="btn-hero btn-hero-primary">지금 만나보기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Section 1: 오늘 갓 수확! (수평 스크롤) -->
+    <section class="today-fresh-section">
+        <div class="container">
+            <h2 class="section-title">오늘 갓 수확! <span class="section-subtitle-en">(Today's Fresh)</span></h2>
+            <div class="horizontal-scroll-container">
+                <div class="horizontal-scroll-grid">
+                    <a href="product-detail.html" class="product-card scroll-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=300&h=300&fit=crop&auto=format" alt="파주 딸기">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">파주 스마트팜 딸기</h3>
+                            <p class="product-price">25,000원</p>
+                            <div class="product-farmer-info">
+                                <a href="farmer-profile-lee.html" class="farmer-link" onclick="event.stopPropagation();">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&auto=format" alt="이스마트 농부" class="farmer-avatar">
+                                    <span class="farmer-name">이스마트 농부</span>
+                                </a>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product-detail.html" class="product-card scroll-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?w=300&h=300&fit=crop&auto=format" alt="신선 상추">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">유기농 모둠 상추</h3>
+                            <p class="product-price">12,000원</p>
+                            <div class="product-farmer-info">
+                                <a href="farmer-profile-park.html" class="farmer-link" onclick="event.stopPropagation();">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&auto=format" alt="박열정 농부" class="farmer-avatar">
+                                    <span class="farmer-name">박열정 농부</span>
+                                </a>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product-detail.html" class="product-card scroll-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1546470427-e26264be0f42?w=300&h=300&fit=crop&auto=format" alt="유기농 토마토">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">유기농 토마토</h3>
+                            <p class="product-price">15,000원</p>
+                            <div class="product-farmer-info">
+                                <a href="farmer-profile-lee.html" class="farmer-link" onclick="event.stopPropagation();">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&auto=format" alt="이스마트 농부" class="farmer-avatar">
+                                    <span class="farmer-name">이스마트 농부</span>
+                                </a>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product-detail.html" class="product-card scroll-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?w=300&h=300&fit=crop&auto=format" alt="파주 유기농 꿀 고구마">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">파주 유기농 꿀 고구마</h3>
+                            <p class="product-price">14,000원</p>
+                            <div class="product-farmer-info">
+                                <a href="farmer-profile.html" class="farmer-link" onclick="event.stopPropagation();">
+                                    <img src="assets/images/yoon-seong-hyun.jpg" alt="윤성현 농부" class="farmer-avatar">
+                                    <span class="farmer-name">윤성현 농부</span>
+                                </a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: 이런 경험 어떠세요? (큐레이션) -->
+    <section class="curation-section">
+        <div class="container">
+            <h2 class="section-title">로컬잇파주 추천: 파주 1박 2일</h2>
+            <div class="curation-grid">
+                <!-- 카드 1: 농장 체험 -->
+                <a href="experiences.html" class="curation-card">
+                    <div class="curation-image">
+                        <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=600&h=400&fit=crop&auto=format" alt="농장 체험">
+                    </div>
+                    <div class="curation-content">
+                        <h3 class="curation-title">농장 체험</h3>
+                        <p class="curation-desc">농부와 함께하는 특별한 하루</p>
+                    </div>
+                </a>
+                <!-- 카드 2: 별밤 캠핑 -->
+                <a href="campsites.html" class="curation-card">
+                    <div class="curation-image">
+                        <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&h=400&fit=crop&auto=format&q=80" alt="별밤 캠핑">
+                    </div>
+                    <div class="curation-content">
+                        <h3 class="curation-title">별밤 캠핑</h3>
+                        <p class="curation-desc">파주의 별밤, 감성 캠핑</p>
+                    </div>
+                </a>
+                <!-- 카드 3: 떠나는 명소 -->
+                <a href="farewell-paju.html" class="curation-card">
+                    <div class="curation-image">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop&auto=format&q=80" alt="떠나는 명소">
+                    </div>
+                    <div class="curation-content">
+                        <h3 class="curation-title">떠나는 명소</h3>
+                        <p class="curation-desc">파주, 그냥 떠나기 아쉽다면?</p>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -263,6 +209,28 @@
         </div>
     </footer>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        // Hero Slider 초기화
+        var heroSwiper = new Swiper(".heroSwiper", {
+            spaceBetween: 0,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: true,
+        });
+    </script>
 </body>
 </html>
