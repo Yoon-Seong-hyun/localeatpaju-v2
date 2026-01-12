@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>로그인 - 로컬잇파주</title>
+     <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="flex items-center justify-center" style="min-height: 100vh; background-color: #f3f4f6;">
+
+     <div class="card" style="width: 100%; max-width: 400px; padding: 40px;">
+          <div style="text-align: center; margin-bottom: 30px;">
+               <a href="index.html"
+                    style="color: var(--color-primary); font-weight: 800; font-size: 1.5rem;">LOCALeatPAJU</a>
+               <h2 style="font-size: 1.5rem; margin-top: 10px;">로그인</h2>
+          </div>
+
+          <form id="login-form">
+               <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">이메일</label>
+                    <input type="email" required
+                         style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"
+                         placeholder="example@email.com">
+               </div>
+               <div style="margin-bottom: 30px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">비밀번호</label>
+                    <input type="password" required
+                         style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"
+                         placeholder="••••••••">
+               </div>
+               <button type="submit" class="btn btn-primary" style="width: 100%;">로그인</button>
+          </form>
+
+          <div style="margin-top: 20px; text-align: center; font-size: 0.875rem; color: var(--color-text-sub);">
+               아직 원이 아니신가요? <a href="#" style="color: var(--color-primary); font-weight: 600;">회원가입</a>
+          </div>
+     </div>
+
+     <script type="module">
+          document.getElementById('login-form').addEventListener('submit', (e) => {
+               e.preventDefault();
+               // Mock Login Logic
+               const btn = e.target.querySelector('button');
+               const originalText = btn.innerText;
+               btn.innerText = '로그인 중...';
+               btn.disabled = true;
+
+               setTimeout(() => {
+                    alert('로그인되었습니다.');
+                    window.location.href = 'index.html';
+               }, 1000);
+          });
+     </script>
+</body>
+
+</html>

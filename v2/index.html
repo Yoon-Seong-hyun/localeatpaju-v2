@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>로컬잇파주 | LocaleatPAJU</title>
+     <link rel="stylesheet" href="css/style.css">
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+     <!-- Language Switcher (Fixed Top Right) -->
+     <div class="lang-dropdown-wrapper">
+          <button class="lang-btn"
+               style="background: rgba(0,0,0,0.3); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+               <i class="fas fa-globe"></i> <span id="current-lang-label">KOREAN</span> <i class="fas fa-chevron-down"
+                    style="font-size: 0.7rem;"></i>
+          </button>
+          <div class="lang-menu">
+               <button class="lang-item active" onclick="changeLanguage('ko')">🇰🇷 Korean</button>
+               <button class="lang-item" onclick="changeLanguage('en')">🇺🇸 English</button>
+               <button class="lang-item" onclick="changeLanguage('jp')">🇯🇵 Japanese</button>
+               <button class="lang-item" onclick="changeLanguage('cn')">🇨🇳 Chinese</button>
+          </div>
+     </div>
+
+     <!-- Header -->
+     <header class="header" id="main-header">
+          <div class="container flex justify-between items-center" style="height: 100%;">
+               <a href="index.html" class="logo">
+                    <h3
+                         style="color: var(--color-primary); font-weight: 800; font-family: var(--font-serif); font-size: 1.5rem;">
+                         LOCALeatPAJU</h3>
+               </a>
+               <nav class="nav-menu flex gap-lg items-center">
+                    <a href="index.html" class="nav-link" data-i18n="nav_home">홈</a>
+                    <a href="products.html" class="nav-link" data-i18n="nav_market">마켓</a>
+                    <a href="#" class="nav-link" data-i18n="nav_story">브랜드 스토리</a>
+                    <a href="#" class="nav-link" data-i18n="nav_farm">농장체험</a>
+                    <a href="#" class="nav-link" data-i18n="nav_camping">별밤 캠핑</a>
+               </nav>
+               <div class="auth-buttons flex gap-sm items-center">
+                    <a href="login.html" class="btn btn-outline"
+                         style="padding: 8px 16px; font-size: 0.9rem; border-color: rgba(255,255,255,0.5); color:white;"
+                         data-i18n="login">로그인</a>
+                    <a href="#" class="btn btn-primary"
+                         style="padding: 8px 16px; font-size: 0.9rem; background: var(--color-accent); color: var(--color-primary-dark);"
+                         data-i18n="signup">회원가입</a>
+               </div>
+          </div>
+     </header>
+
+     <!-- Hero Section -->
+     <section class="hero">
+          <div class="hero-bg"
+               style="background-image: url('https://images.unsplash.com/photo-1595113316349-9fa4eb24f884?q=80&w=2672&auto=format&fit=crop');">
+          </div>
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+               <span class="hero-subtitle" data-i18n="hero_subtitle">Premium Local Food Market</span>
+               <h1 class="hero-title" data-i18n="hero_title">
+                    파주의 시간이<br>
+                    맛이 되는 순간
+               </h1>
+               <p style="font-size: 1.15rem; color: rgba(255,255,255,0.9); margin-bottom: 40px; font-weight: 300; line-height: 1.8;"
+                    data-i18n="hero_desc">
+                    가장 가까운 거리에서 만나는 제철의 신선함.<br>
+                    오늘 아침, 농부의 손끝에서 당신의 식탁으로 전합니다.
+               </p>
+               <div class="flex gap-md justify-center">
+                    <a href="#products" class="btn btn-primary"
+                         style="background-color: var(--color-accent); color: var(--color-primary-dark);">마켓 입장하기</a>
+                    <a href="#" class="btn btn-outline" style="border-color: rgba(255,255,255,0.5); color: white;"
+                         data-i18n="btn_story">Brand Story</a>
+               </div>
+          </div>
+     </section>
+
+     <!-- Value Proposition (Magazine Layout) -->
+     <section class="container" style="padding-bottom: 0;">
+          <div class="text-center section-header">
+               <span class="section-tag" data-i18n="value_tag">OUR VALUES</span>
+               <h2 class="section-title" data-i18n="value_title">왜 '로컬잇파주' 인가요?</h2>
+               <p class="section-desc" data-i18n="value_desc">
+                    단순히 농산물을 파는 것이 아닙니다. <br>
+                    우리는 자연과 사람, 그리고 식탁을 잇는 이야기를 전달합니다.
+               </p>
+          </div>
+
+          <div class="feature-grid" style="margin-top: 60px;">
+               <!-- Feature 1 -->
+               <div class="feature-card">
+                    <div class="feature-img-box">
+                         <img src="assets/images/delivery.png" alt="Fresh" class="feature-img">
+                         <div style="position: absolute; bottom: 20px; left: 20px; color: white;">
+                              <h4 style="font-size: 2rem; opacity: 0.2; font-weight: 900;">01</h4>
+                         </div>
+                    </div>
+                    <div class="feature-content" style="text-align: left;">
+                         <h3 class="feature-title" data-i18n="feat_1_title">24시간 내 배송</h3>
+                         <p class="feature-text" data-i18n="feat_1_text">
+                              "오늘 아침에 딴 딸기를 저녁에 먹을 수 있다면?"<br>
+                              파주 지역 내 100% 당일 수확, 당일 배송 원칙을 지킵니다. 유통과정이 길어지며 잃어버리는 맛과 영양을 지켜드립니다.
+                         </p>
+                         <a href="#" class="btn-link"><span data-i18n="feat_1_link">배송 정책 보기</span> <i
+                                   class="fas fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+                    </div>
+               </div>
+
+               <!-- Feature 2 -->
+               <div class="feature-card" style="margin-top: 40px;"> <!-- Staggered layout -->
+                    <div class="feature-img-box">
+                         <img src="assets/images/farmer.png" alt="Farmer" class="feature-img">
+                         <div style="position: absolute; bottom: 20px; left: 20px; color: white;">
+                              <h4 style="font-size: 2rem; opacity: 0.2; font-weight: 900;">02</h4>
+                         </div>
+                    </div>
+                    <div class="feature-content" style="text-align: left;">
+                         <h3 class="feature-title" data-i18n="feat_2_title">투명한 농부 실명제</h3>
+                         <p class="feature-text" data-i18n="feat_2_text">
+                              누가, 어디서, 어떻게 길렀는지 숨기지 않습니다. <br>
+                              모든 상품에는 농부님의 얼굴과 이름, 그리고 작물에 쏟은 정성이 기록된 '경작 일지' QR코드가 포함됩니다.
+                         </p>
+                    </div>
+               </div>
+
+               <!-- Feature 3 -->
+               <div class="feature-card">
+                    <div class="feature-img-box">
+                         <img src="assets/images/farm_experience.png" alt="Experience" class="feature-img">
+                         <div style="position: absolute; bottom: 20px; left: 20px; color: white;">
+                              <h4 style="font-size: 2rem; opacity: 0.2; font-weight: 900;">03</h4>
+                         </div>
+                    </div>
+                    <div class="feature-content" style="text-align: left;">
+                         <h3 class="feature-title" data-i18n="feat_3_title">오감(五感) 체험</h3>
+                         <p class="feature-text" data-i18n="feat_3_text">
+                              먹는 즐거움을 넘어 기르는 보람까지.<br>
+                              주말농장 분양과 계절별 수확 체험 프로그램을 통해, 아이들에게 흙을 만지는 소중한 추억을 선물하세요.
+                         </p>
+                         <a href="#" class="btn-link"><span data-i18n="feat_3_link">체험 예약하기</span> <i
+                                   class="fas fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- New: Price Stats Section -->
+     <section class="container" style="padding-top: 40px; padding-bottom: 80px;">
+          <div class="grid grid-cols-2 gap-lg"
+               style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 60px; align-items: center;">
+               <div class="price-info-text">
+                    <span class="section-tag" data-i18n="p_stat_tag">SMART CHOICE</span>
+                    <h2 class="section-title text-left" style="margin-bottom: 24px; text-align: left;"
+                         data-i18n="price_title">
+                         오늘의 가격,<br>
+                         투명하게 비교하세요.
+                    </h2>
+                    <p class="section-desc" style="margin: 0; text-align: left; margin-bottom: 32px;"
+                         data-i18n="p_stat_desc">
+                         농림축산식품부와 aT(한국농수산식품유통공사)가 제공하는
+                         <strong style="color: var(--color-primary);">KAMIS(농산물유통정보)</strong> 데이터를 실시간으로 확인할 수
+                         있습니다.<br><br>
+                         중간 유통 단계가 없는 로컬푸드가 얼마나 합리적인지,
+                         직접 눈으로 확인하고 구매하세요. 농부에게는 제값을, 소비자에게는 만족을 드립니다.
+                    </p>
+                    <div class="flex gap-md">
+                         <div style="background: #eef2e6; padding: 20px; border-radius: 8px; flex: 1;">
+                              <h4 style="font-size: 0.9rem; color: #555; margin-bottom: 8px;" data-i18n="p_stat_market">
+                                   일반 유통 단계</h4>
+                              <span
+                                   style="font-size: 1.5rem; font-weight: 700; color: #888; text-decoration: line-through;">5~7단계</span>
+                         </div>
+                         <div
+                              style="background: var(--color-primary-dark); padding: 20px; border-radius: 8px; flex: 1; color: white;">
+                              <h4 style="font-size: 0.9rem; color: rgba(255,255,255,0.8); margin-bottom: 8px;"
+                                   data-i18n="p_stat_local">로컬잇파주
+                              </h4>
+                              <span style="font-size: 1.5rem; font-weight: 700;" data-i18n="p_stat_zero">0단계
+                                   (직거래)</span>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Widget Placeholder -->
+               <div id="price-widget-container">
+                    <div
+                         style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); text-align: center;">
+                         <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: var(--color-primary);"></i>
+                         <p style="margin-top: 16px; color: #888;" data-i18n="loading_msg">실시간 시세 정보를 불러오는 중...</p>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- Lifestyle Curation Section -->
+     <section class="container" style="padding-bottom: 80px;">
+          <div style="text-align: center; margin-bottom: 50px;">
+               <span class="section-tag" data-i18n="curation_tag">LIFESTYLE CURATION</span>
+               <h2 class="section-title" data-i18n="curation_title">DMZ가 제안하는<br>건강한 라이프스타일</h2>
+               <p class="section-desc" data-i18n="curation_desc">청정 자연의 에너지를 담은 로컬잇파주만의 특별한 제안.<br>당신의 하루를 더욱 가치있게 만들어
+                    드립니다.</p>
+          </div>
+          <div class="grid grid-cols-3 gap-lg"
+               style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+               <!-- Card 1 -->
+               <div
+                    style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
+                    <div style="height: 240px; overflow: hidden;">
+                         <img src="assets/products/tofu_snack.png" alt="Vegan"
+                              style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;">
+                    </div>
+                    <div style="padding: 24px;">
+                         <div
+                              style="color: var(--color-primary); font-weight: 700; font-size: 0.9rem; margin-bottom: 8px;">
+                              VEGAN & ECO</div>
+                         <h3 style="font-size: 1.3rem; margin-bottom: 12px; font-family: var(--font-serif);">속 편한 비건 디저트
+                         </h3>
+                         <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">우유와 버터 없이도 충분히 달콤합니다. 파주 장단콩의 진한
+                              고소함을 담은 비건 베이커리를 만나보세요.</p>
+                    </div>
+               </div>
+               <!-- Card 2 -->
+               <div
+                    style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
+                    <div style="height: 240px; overflow: hidden;">
+                         <img src="assets/products/jangdan_yam.png" alt="Inner Beauty"
+                              style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;">
+                    </div>
+                    <div style="padding: 24px;">
+                         <div
+                              style="color: var(--color-accent); font-weight: 700; font-size: 0.9rem; margin-bottom: 8px;">
+                              INNER BEAUTY</div>
+                         <h3 style="font-size: 1.3rem; margin-bottom: 12px; font-family: var(--font-serif);">마시는 이너뷰티
+                         </h3>
+                         <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">감악산 야생 칡과 장단 마의 생명력을 한 포에 담았습니다.
+                              바쁜
+                              아침, 당신의 위장과 피부를 지켜드립니다.</p>
+                    </div>
+               </div>
+               <!-- Card 3 -->
+               <div
+                    style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
+                    <div style="height: 240px; overflow: hidden;">
+                         <img src="assets/products/sanmeoru_wine.png" alt="Party"
+                              style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;">
+                    </div>
+                    <div style="padding: 24px;">
+                         <div style="color: #AB2346; font-weight: 700; font-size: 0.9rem; margin-bottom: 8px;">HOME
+                              PARTY</div>
+                         <h3 style="font-size: 1.3rem; margin-bottom: 12px; font-family: var(--font-serif);">로컬 홈파티</h3>
+                         <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">산머루 와인으로 만드는 뱅쇼, 달콤한 애플 소이 약과.
+                              평범한 저녁을 특별한 파티로 바꿔줄 로컬 푸드입니다.</p>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- Farmer Story Section (Banner) -->
+     <section class="container">
+          <div class="farmer-banner">
+               <div class="farmer-img-side">
+                    <img src="assets/images/monthly_farmer_v2.jpg" alt="Old Farmer">
+                    <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.1);"></div>
+               </div>
+               <div class="farmer-txt-side">
+                    <span style="color: var(--color-accent); font-weight: 600; letter-spacing: 0.1em; margin-bottom: 16px;"
+                         data-i18n="farmer_tag">MONTHLY
+                         FARMER</span>
+                    <h2 style="font-size: 2.8rem; margin-bottom: 24px; line-height: 1.2;" data-i18n="farmer_title">
+                         "못생겨도 괜찮아,<br>
+                         약 안 치고 키웠잖아."
+                    </h2>
+                    <p style="color: #666; margin-bottom: 30px; font-size: 1.1rem;" data-i18n="farmer_desc">
+                         파주 문산읍에서 40년째 사과 농사를 짓고 계신 <b style="color: #333;">김철수 농부님</b>.<br>
+                         올해 유난히 잦았던 비바람에도 꿋꿋이 버텨준 사과들이 기특하다고 하십니다.
+                         모양은 조금 투박해도, 한 입 베어 물면 퍼지는 진한 과육의 향기는
+                         그 어떤 백화점 과일과도 비교할 수 없습니다.
+                    </p>
+                    <div class="flex gap-md">
+                         <a href="#" class="btn btn-outline" data-i18n="farmer_btn_interview">인터뷰 전문 보기</a>
+                         <a href="#" class="btn btn-link" style="color: var(--color-primary); font-weight: 600;"><span
+                                   data-i18n="farmer_btn_buy">못난이 사과
+                                   구매하기</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- Global Export Banner -->
+     <section class="container" style="margin-bottom: 60px;">
+          <div
+               style="background: linear-gradient(90deg, #1c1c1c 0%, #2F4F4F 100%); border-radius: 16px; padding: 40px; color: white;">
+
+               <!-- Header Area -->
+               <div
+                    style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; flex-wrap: wrap; gap: 20px;">
+                    <div>
+                         <span style="background: #C19A6B; color: #1c1c1c; padding: 4px 12px; border-radius: 4px; font-weight: 700; font-size: 0.8rem; margin-bottom: 12px; display: inline-block;"
+                              data-i18n="export_tag">K-FOOD GLOBAL PROJECT</span>
+                         <h2 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 12px;"
+                              data-i18n="export_title">파주의 맛, 세계의 식탁으로</h2>
+                         <p style="opacity: 0.8; max-width: 500px; margin: 0;" data-i18n="export_desc">
+                              장단콩을 활용한 <strong>두부 과자</strong>부터 파주 인삼 젤리까지.<br>
+                              로컬잇파주는 파주의 특산물을 가공하여 전 세계로 수출합니다.
+                         </p>
+                    </div>
+                    <a href="#" class="btn btn-outline" style="border-color: rgba(255,255,255,0.3); color: white;"><span
+                              data-i18n="export_btn">수출 상품 보러가기</span> <i class="fas fa-globe"></i></a>
+               </div>
+
+               <!-- Export Products Grid -->
+               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px;">
+                    <!-- Item 1: Tofu Snack -->
+                    <div
+                         style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 15px; text-align: center; backdrop-filter: blur(5px);">
+                         <div
+                              style="width: 80px; height: 80px; margin: 0 auto 12px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(255,255,255,0.2);">
+                              <img src="assets/products/tofu_snack.png" alt="Tofu Snack"
+                                   style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; color: white;"
+                              data-i18n="export_p1">장단콩 두부과자</h4>
+                         <span style="font-size: 0.8rem; color: #C19A6B; display: block;"
+                              data-i18n="export_p1_desc">미국/일본 수출</span>
+                    </div>
+                    <!-- Item 2: Ginseng Jelly -->
+                    <div
+                         style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 15px; text-align: center; backdrop-filter: blur(5px);">
+                         <div
+                              style="width: 80px; height: 80px; margin: 0 auto 12px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(255,255,255,0.2);">
+                              <img src="assets/products/ginseng_jelly.png" alt="Ginseng Jelly"
+                                   style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; color: white;"
+                              data-i18n="export_p2">개성인삼 젤리스틱</h4>
+                         <span style="font-size: 0.8rem; color: #C19A6B; display: block;" data-i18n="export_p2_desc">동남아
+                              3국 수출</span>
+                    </div>
+                    <!-- Item 3: Sparkling -->
+                    <div
+                         style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 15px; text-align: center; backdrop-filter: blur(5px);">
+                         <div
+                              style="width: 80px; height: 80px; margin: 0 auto 12px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(255,255,255,0.2);">
+                              <img src="assets/products/sanmeoru_wine.png" alt="Sparkling"
+                                   style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; color: white;"
+                              data-i18n="export_p3">산머루 스파클링</h4>
+                         <span style="font-size: 0.8rem; color: #C19A6B; display: block;" data-i18n="export_p3_desc">유럽
+                              수출 예정</span>
+                    </div>
+                    <!-- Item 4: Rice Chip -->
+                    <div
+                         style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 15px; text-align: center; backdrop-filter: blur(5px);">
+                         <div
+                              style="width: 80px; height: 80px; margin: 0 auto 12px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(255,255,255,0.2);">
+                              <img src="assets/products/hansuwi_rice.png" alt="Rice Chip"
+                                   style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; color: white;"
+                              data-i18n="export_p4">한수위 라이스칩</h4>
+                         <span style="font-size: 0.8rem; color: #C19A6B; display: block;" data-i18n="export_p4_desc">비건
+                              인증 완료</span>
+                    </div>
+               </div>
+
+          </div>
+     </section>
+
+     <!-- Products Section -->
+     <section id="products" style="background-color: #f7f9f7; padding: 100px 0;">
+          <div class="container">
+               <div class="flex justify-between items-end" style="margin-bottom: 50px;">
+                    <div>
+                         <span class="section-tag" style="margin-bottom: 8px;" data-i18n="season_tag">SEASONAL
+                              PICK</span>
+                         <h2 class="section-title" style="margin:0;" data-i18n="season_title">지금 가장
+                              맛있는</h2>
+                    </div>
+                    <a href="products.html" class="btn-link" style="font-size: 1.1rem;" data-i18n="season_more_btn">전체
+                         상품 보기</a>
+               </div>
+
+               <div id="product-grid" class="product-grid">
+                    <!-- JS will inject products here -->
+                    <div style="grid-column: 1/-1; text-align: center; padding: 60px;">
+                         <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: var(--color-primary);"></i>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- Instagram/Review Section Placeholder -->
+     <section class="container" style="padding-top: 40px;">
+          <div class="text-center section-header">
+               <h2 class="section-title" data-i18n="review_title">#로컬잇파주 후기</h2>
+               <p class="section-desc" data-i18n="review_desc">여러분의 식탁에 도착한 파주의 싱그러움을 공유해주세요.</p>
+          </div>
+          <div class="grid grid-cols-4 gap-sm" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+               <div
+                    style="aspect-ratio: 1/1; background: #eee; border-radius: 8px; overflow: hidden; position: relative;">
+                    <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?q=80&w=400&fit=crop"
+                         style="width:100%; height:100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 10px; right: 10px; color: white;"><i
+                              class="fab fa-instagram"></i></div>
+               </div>
+               <div
+                    style="aspect-ratio: 1/1; background: #eee; border-radius: 8px; overflow: hidden; position: relative;">
+                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=400&fit=crop"
+                         style="width:100%; height:100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 10px; right: 10px; color: white;"><i
+                              class="fab fa-instagram"></i></div>
+               </div>
+               <div
+                    style="aspect-ratio: 1/1; background: #eee; border-radius: 8px; overflow: hidden; position: relative;">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=400&fit=crop"
+                         style="width:100%; height:100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 10px; right: 10px; color: white;"><i
+                              class="fab fa-instagram"></i></div>
+               </div>
+               <div
+                    style="aspect-ratio: 1/1; background: #eee; border-radius: 8px; overflow: hidden; position: relative;">
+                    <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=400&fit=crop"
+                         style="width:100%; height:100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 10px; right: 10px; color: white;"><i
+                              class="fab fa-instagram"></i></div>
+               </div>
+          </div>
+     </section>
+
+     <!-- Footer -->
+     <footer class="footer">
+          <div class="container">
+               <div class="flex flex-col items-center text-center">
+                    <h3 style="color: white; font-family: var(--font-serif); font-size: 2rem; margin-bottom: 24px;">
+                         LOCALeatPAJU</h3>
+                    <p style="max-width: 500px; margin-bottom: 40px; opacity: 0.7;" data-i18n="footer_desc">
+                         로컬잇파주는 파주시와 청년 농부들이 함께 만드는<br>
+                         로컬푸드 상생 프로젝트입니다.
+                    </p>
+
+                    <div class="flex gap-lg" style="margin-bottom: 40px; justify-content: center;">
+                         <a href="#" style="opacity: 0.8; font-weight: 500;" data-i18n="footer_link_story">브랜드 스토리</a>
+                         <a href="#" style="opacity: 0.8; font-weight: 500;" data-i18n="footer_link_terms">이용약관</a>
+                         <a href="#" style="opacity: 0.8; font-weight: 500;"
+                              data-i18n="footer_link_privacy">개인정보처리방침</a>
+                         <a href="#" style="opacity: 0.8; font-weight: 500;" data-i18n="footer_link_inquiry">입점 문의</a>
+                    </div>
+
+                    <div style="border-top: 1px solid rgba(255,255,255,0.1); width: 100%; padding-top: 30px; font-size: 0.8rem; opacity: 0.5;"
+                         data-i18n="footer_info">
+                         경기도 파주시 농부로 123 (가상건물) 1층 | 대표: 김파주<br>
+                         사업자등록번호: 000-00-00000 | 통신판매업신고: 2024-파주-0000<br>
+                         COPYRIGHT © 2024 LOCALeatPAJU. ALL RIGHTS RESERVED.
+                    </div>
+               </div>
+          </div>
+     </footer>
+
+     <script src="js/script.full.js"></script>
+</body>
+
+</html>

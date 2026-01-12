@@ -1,0 +1,23 @@
+[
+     {
+          "id": "f1",
+          "name": "이스마트 농부",
+          "farmName": "스마트 팜팜",
+          "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
+          "story": "첨단 기술로 키워낸 균일한 품질의 농산물을 약속드립니다."
+     },
+     {
+          "id": "f2",
+          "name": "박열정 농부",
+          "farmName": "열정 상추 농장",
+          "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop",
+          "story": "땅을 사랑하는 마음으로 매일 아침 밭을 일굽니다."
+     },
+     {
+          "id": "f3",
+          "name": "윤성현 농부",
+          "farmName": "성현네 유기농",
+          "image": "assets/images/yoon-seong-hyun.jpg",
+          "story": "내 가족이 먹는다는 생각으로 정직하게 농사짓습니다."
+     }
+]

@@ -1,0 +1,47 @@
+:root {
+    /* Brand Colors - More Nuanced */
+    --color-primary: #2F4F4F;
+    /* Dark Slate Gray - 더 깊이 있는 녹색 */
+    --color-primary-dark: #1A3030;
+    --color-primary-light: #5F7A7A;
+    --color-accent: #C19A6B;
+    /* Earthy Gold - 고급스러운 포인트 컬러 */
+    --color-accent-light: #E0C09E;
+
+    --color-background: #F9F8F6;
+    /* Warm White - 종이 질감 느낌 */
+    --color-surface: #FFFFFF;
+
+    --color-text-main: #2C2C2C;
+    --color-text-sub: #595959;
+    --color-text-light: #8C8C8C;
+    --color-border: #EAEAEA;
+
+    /* Typography */
+    /* Sans-serif for clean readability */
+    --font-main: 'Pretendard', -apple-system, sans-serif;
+    /* Serif for titles - adds sophistication */
+    --font-serif: 'Noto Serif KR', serif;
+
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 64px;
+    --spacing-xxl: 120px;
+
+    /* Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+
+    /* Shadows - softer & deeper */
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* Layout */
+    --container-width: 1200px;
+    --header-height: 80px;
+}

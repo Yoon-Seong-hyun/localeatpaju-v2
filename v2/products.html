@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>마켓 - 로컬잇파주</title>
+     <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+     <!-- Header injected by main.js -->
+
+     <div class="container" style="padding-top: 120px; padding-bottom: 60px;">
+          <h1 class="section-title">전체 상품</h1>
+
+          <div class="flex justify-between items-center" style="margin-bottom: 40px;">
+               <div class="flex gap-sm">
+                    <button class="btn btn-primary">전체</button>
+                    <button class="btn btn-outline">과일</button>
+                    <button class="btn btn-outline">채소</button>
+                    <button class="btn btn-outline">곡물</button>
+               </div>
+               <select style="padding: 8px 16px; border-radius: 8px; border: 1px solid #ddd;">
+                    <option>최신순</option>
+                    <option>인기순</option>
+                    <option>가격 낮은순</option>
+               </select>
+          </div>
+
+          <div id="product-grid" class="grid grid-cols-4 gap-lg">
+               <!-- Products will be loaded here -->
+               <div style="grid-column: 1/-1; text-align: center; padding: 40px;">Loading...</div>
+          </div>
+     </div>
+
+     <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
