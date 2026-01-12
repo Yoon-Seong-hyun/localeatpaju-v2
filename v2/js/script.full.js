@@ -699,7 +699,7 @@ async function getProducts() {
                     "name": "시크릿가든 캠핑장",
                     "price": 60000,
                     "category": "CAMPING",
-                    "image": "assets/images/korean_camping_bbq_closeup.png",
+                    "image": "assets/images/korean_camping_bbq_closeup.png?v=20260113",
                     "badges": ["프라이빗", "수영장"],
                     "description": "감악산 자락에 위치한 프라이빗 캠핑장. 개별 바베큐장과 수영장, 감성 카페를 갖춘 럭셔리 휴양지.",
                     "trans": {
@@ -727,7 +727,7 @@ async function getProducts() {
                     "name": "감악산 캠핑장",
                     "price": 40000,
                     "category": "CAMPING",
-                    "image": "assets/images/korean_camping_valley_v2.png",
+                    "image": "assets/images/korean_camping_valley_v2.png?v=20260113",
                     "badges": ["계곡물놀이", "샤워장"],
                     "description": "계곡 바로 옆에 있어 여름철 물놀이에 최적화된 곳. 깨끗한 샤워시설과 바베큐장이 준비되어 있습니다.",
                     "trans": {
@@ -741,7 +741,7 @@ async function getProducts() {
                     "name": "평화누리 캠핑장",
                     "price": 30000,
                     "category": "CAMPING",
-                    "image": "assets/images/korean_camping_park_v2.png",
+                    "image": "assets/images/korean_camping_park_v2.png?v=20260113",
                     "badges": ["넓은공간", "조용한"],
                     "description": "평화 누리 공원의 넓은 잔디밭에서 즐기는 여유로운 캠핑. 탁 트인 시야와 조용한 휴식을 원하는 캠퍼들에게 추천.",
                     "trans": {
