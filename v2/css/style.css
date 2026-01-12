@@ -153,10 +153,13 @@ img {
 
 /* Hero Section - Magazine Style */
 .hero {
-     height: 50vh;
-     /* Reduced from 90vh */
-     min-height: 400px;
-     /* Reduced min-height */
+     width: 100%;
+     height: 45vh;
+     /* 창 높이의 약 45% 차지 (기존 55%에서 20% 축소) */
+     min-height: 360px;
+     /* 너무 작아지지 않게 최소 높이 설정 */
+     max-height: 560px;
+     /* 너비가 넓어도 너무 높아지지 않게 최대 높이 제한 */
      position: relative;
      display: flex;
      align-items: center;
@@ -344,7 +347,7 @@ section {
      border-radius: var(--radius-lg);
      overflow: hidden;
      box-shadow: var(--shadow-lg);
-     min-height: 500px;
+     min-height: 450px;
 }
 
 .farmer-img-side {
@@ -360,10 +363,173 @@ section {
 
 .farmer-txt-side {
      flex: 1;
-     padding: 60px;
+     padding: 50px;
      display: flex;
      flex-direction: column;
      justify-content: center;
+}
+
+
+/* AI Curation Section */
+.ai-section {
+     background: linear-gradient(135deg, #fdfbf7 0%, #fff 100%);
+     border-radius: 20px;
+     padding: 60px 40px;
+     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+     border: 1px solid rgba(0, 0, 0, 0.03);
+     margin-top: 60px;
+}
+
+.ai-tabs {
+     display: flex;
+     justify-content: center;
+     gap: 15px;
+     margin-bottom: 40px;
+}
+
+.ai-tab-btn {
+     padding: 12px 24px;
+     border-radius: 50px;
+     border: 1px solid #ddd;
+     background: white;
+     color: #666;
+     font-weight: 600;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+}
+
+.ai-tab-btn.active {
+     background: var(--color-primary);
+     color: white;
+     border-color: var(--color-primary);
+     box-shadow: 0 5px 15px rgba(47, 79, 79, 0.2);
+}
+
+.ai-content {
+     display: none;
+     animation: fadeIn 0.5s ease;
+}
+
+.ai-content.active {
+     display: block;
+}
+
+/* AI Chef Style */
+.ingredient-chips {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 10px;
+     justify-content: center;
+     margin-bottom: 30px;
+}
+
+.ing-chip {
+     padding: 8px 16px;
+     background: #f5f5f5;
+     border-radius: 8px;
+     cursor: pointer;
+     border: 1px solid transparent;
+     transition: all 0.2s;
+     user-select: none;
+}
+
+.ing-chip:hover {
+     background: #e9e9e9;
+}
+
+.ing-chip.selected {
+     background: #e8f5e9;
+     color: var(--color-primary);
+     border-color: var(--color-primary);
+     font-weight: 600;
+}
+
+/* Generic Form Styles for AI */
+.ai-form-group {
+     max-width: 500px;
+     margin: 0 auto 30px;
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+}
+
+.ai-select {
+     width: 100%;
+     padding: 12px;
+     border: 1px solid #ddd;
+     border-radius: 8px;
+     font-family: inherit;
+     font-size: 1rem;
+     color: #333;
+     outline: none;
+}
+
+.ai-select:focus {
+     border-color: var(--color-primary);
+}
+
+.btn-ai-action {
+     background: var(--color-primary);
+     color: white;
+     width: 100%;
+     max-width: 300px;
+     margin: 0 auto;
+     padding: 15px;
+     border-radius: 12px;
+     font-size: 1.1rem;
+     font-weight: 700;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+     cursor: pointer;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+     transition: transform 0.2s;
+}
+
+.btn-ai-action:hover {
+     transform: translateY(-2px);
+     background: var(--color-primary-dark);
+}
+
+/* AI Result Card */
+.ai-result-card {
+     background: white;
+     border: 1px solid #eee;
+     border-radius: 16px;
+     padding: 30px;
+     margin-top: 40px;
+     text-align: center;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+     display: none;
+     /* hidden by default */
+}
+
+.ai-result-card.show {
+     display: block;
+     animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+     from {
+          opacity: 0;
+          transform: translateY(20px);
+     }
+
+     to {
+          opacity: 1;
+          transform: translateY(0);
+     }
+}
+
+.ai-loading {
+     display: none;
+     text-align: center;
+     padding: 40px;
+     color: #888;
 }
 
 /* Footer */

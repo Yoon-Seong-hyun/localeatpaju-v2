@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>회원가입 - 로컬잇파주</title>
+     <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="flex items-center justify-center" style="min-height: 100vh; background-color: #f3f4f6;">
+
+     <div class="card" style="width: 100%; max-width: 400px; padding: 40px;">
+          <div style="text-align: center; margin-bottom: 30px;">
+               <a href="index.html"
+                    style="color: var(--color-primary); font-weight: 800; font-family: 'Poppins', sans-serif; font-size: 1.5rem;">
+                    LOCAL<span style="color: #d32f2f;">e</span><span style="color: #f57f17;">a</span><span
+                         style="color: #fbc02d;">t</span>PAJU
+               </a>
+               <h2 style="font-size: 1.5rem; margin-top: 10px;">회원가입</h2>
+          </div>
+
+          <form id="signup-form">
+               <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">이름</label>
+                    <input type="text" required
+                         style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"
+                         placeholder="홍길동">
+               </div>
+               <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">이메일</label>
+                    <input type="email" required
+                         style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"
+                         placeholder="example@email.com">
+               </div>
+               <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">비밀번호</label>
+                    <input type="password" required
+                         style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"
+                         placeholder="최소 8자 이상">
+               </div>
+               <div style="margin-bottom: 30px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">비밀번호 확인</label>
+                    <input type="password" required
+                         style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"
+                         placeholder="비밀번호 재입력">
+               </div>
+               <button type="submit" class="btn btn-primary" style="width: 100%;">회원가입</button>
+          </form>
+
+          <div style="margin-top: 20px; text-align: center; font-size: 0.875rem; color: var(--color-text-sub);">
+               이미 계정이 있으신가요? <a href="login.html" style="color: var(--color-primary); font-weight: 600;">로그인</a>
+          </div>
+     </div>
+
+     <script>
+          document.getElementById('signup-form').addEventListener('submit', (e) => {
+               e.preventDefault();
+               // Mock Signup Logic
+               const btn = e.target.querySelector('button');
+               btn.innerText = '가입 처리 중...';
+               btn.disabled = true;
+
+               setTimeout(() => {
+                    const user = {
+                         name: e.target.querySelector('input[type="text"]').value,
+                         email: e.target.querySelector('input[type="email"]').value,
+                         type: 'email'
+                    };
+                    localStorage.setItem('localeat_user', JSON.stringify(user));
+
+                    alert('회원가입이 완료되었습니다! 자동 로그인됩니다.');
+                    window.location.href = 'index.html';
+               }, 1000);
+          });
+     </script>
+</body>
+
+</html>
