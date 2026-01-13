@@ -6,10 +6,24 @@
     "category": "프리미엄 콩",
     "image": "assets/products/jangdan_soybean.png",
     "badges": [
-      "베스트"
+      "베스트셀러",
+      "임금님 진상"
     ],
-    "description": "임금님 수라상에 올랐던 파주의 자랑. 배수가 좋은 마사토에서 자라 맛이 진하고 고소합니다.",
-    "farmerId": "f1"
+    "description": "임금님 수라상에 올랐던 파주의 자랑. 배수가 잘 되는 마사토에서 자라 고소한 맛과 영양이 일품입니다.",
+    "trans": {
+      "en": {
+        "name": "Paju Jangdan Soybeans 1kg",
+        "description": "The pride of Paju, once served to the King. Grown in well-drained soil for a rich, nutty flavor."
+      },
+      "jp": {
+        "name": "坡州長湍豆 (白大豆) 1kg",
+        "description": "王様の食卓に上がった坡州の誇り。水はけの良い土壌で育ち、香ばしい味と栄養が逸品です。"
+      },
+      "cn": {
+        "name": "坡州长湍豆 (白豆) 1kg",
+        "description": "曾进贡给国王的坡州骄傲。在排水良好的磨沙土中生长，香味和营养一绝。"
+      }
+    }
   },
   {
     "id": "p5",
@@ -18,10 +32,23 @@
     "category": "프리미엄 인삼",
     "image": "assets/products/paju_ginseng.png",
     "badges": [
-      "활력충전"
+      "면역력강화"
     ],
-    "description": "고려인삼의 맥을 잇는 6년근 파주 인삼. DMZ의 청정 자연이 키운 면역력의 결정체입니다.",
-    "farmerId": "f2"
+    "description": "고려인삼의 맥을 잇는 6년근 파주 인삼. DMZ의 청정 자연이 키워내 사포닌 함량이 월등히 높습니다.",
+    "trans": {
+      "en": {
+        "name": "Paju Gaeseong Ginseng (6-year)",
+        "description": "6-year-old Ginseng inheriting the legacy of Goryeo Ginseng. Grown in DMZ's nature."
+      },
+      "jp": {
+        "name": "坡州開城高麗人参 6年根",
+        "description": "高麗人参の脈を受け継ぐ6年根坡州人参。DMZの清浄な自然が育て、サポニン含有量が非常に高いです。"
+      },
+      "cn": {
+        "name": "坡州开城人参 6年根",
+        "description": "继承高丽人参脉络的6年根坡州人参。DMZ洁净自然培育，皂苷含量极高。"
+      }
+    }
   },
   {
     "id": "p6",
@@ -30,10 +57,23 @@
     "category": "프리미엄 쌀",
     "image": "assets/products/hansuwi_rice.png",
     "badges": [
-      "데일리"
+      "무농약인증"
     ],
-    "description": "임진강의 맑은 물과 비옥한 토양이 키운 명품 쌀. 밥만 먹어도 달다는 말이 절로 나옵니다.",
-    "farmerId": "f3"
+    "description": "기름진 토양과 깨끗한 물이 키워낸 밥맛의 본질.",
+    "trans": {
+      "en": {
+        "name": "Imjingang Hansuwi Rice 10kg",
+        "description": "Premium rice grown with clear water from Imjin River. The rice itself tastes sweet."
+      },
+      "jp": {
+        "name": "臨津江ハンスウィ米 10kg",
+        "description": "臨津江の清らかな水と肥沃な土地が育てた名品米。一粒一粒が生きており、噛むほどに甘みが広がります。"
+      },
+      "cn": {
+        "name": "临津江汉水大米 10kg",
+        "description": "临津江清澈的河水和肥沃土地培育的名品大米。米粒饱满，越嚼越甜。"
+      }
+    }
   },
   {
     "id": "p7",
@@ -42,10 +82,24 @@
     "category": "자연산",
     "image": "assets/products/gamaksan_herbs.png",
     "badges": [
-      "야생"
+      "숙취해소",
+      "이너뷰티"
     ],
-    "description": "사람의 손이 닿지 않은 감악산 야생 칡의 생명력. 숙취 해소와 이너뷰티를 위한 숲의 선물.",
-    "farmerId": "f4"
+    "description": "사람의 손이 닿지 않은 야생, 그 강인한 생명력을 담다.",
+    "trans": {
+      "en": {
+        "name": "Gamaksan Wild Arrowroot Extract",
+        "description": "Wild vitality from Gamaksan untouched by human hands. A forest gift for inner beauty."
+      },
+      "jp": {
+        "name": "紺岳山野生葛汁 (30包)",
+        "description": "人の手が届かない紺岳山の深い場所にある野生葛。土の中の真珠と呼ばれる葛の濃い生命力を込めました。"
+      },
+      "cn": {
+        "name": "绀岳山野生葛根汁 (30包)",
+        "description": "人迹罕至的绀岳山深处的野生葛。蕴含被称为土中珍珠的葛根的浓郁生命力。"
+      }
+    }
   },
   {
     "id": "p8",
@@ -54,10 +108,23 @@
     "category": "뿌리 채소",
     "image": "assets/products/jangdan_yam.png",
     "badges": [
-      "위장 보호"
+      "위장보호"
     ],
-    "description": "임진강 모래흙이 키워 속이 꽉 찬 마. 위장을 보호하는 당신의 아침 친구입니다.",
-    "farmerId": "f5"
+    "description": "임진강 사질토에서 자라 육질이 단단하고 맛이 담백합니다. 바쁜 아침, 속을 편안하게 해주는 최고의 식사입니다.",
+    "trans": {
+      "en": {
+        "name": "Paju Jangdan Yam (Round) 5kg",
+        "description": "Yam grown in Imjin River's sandy soil. A morning friend that protects your stomach."
+      },
+      "jp": {
+        "name": "坡州長湍長芋 (丸芋) 5kg",
+        "description": "臨津江の砂質土で育ち、肉質がしっかりして味が淡泊です。忙しい朝、胃を楽にしてくれる最高の食事です。"
+      },
+      "cn": {
+        "name": "坡州长湍山药 (圆山药) 5kg",
+        "description": "在临津江沙质土中生长，肉质结实，味道清淡。繁忙的早晨，让肠胃舒适的最佳餐点。"
+      }
+    }
   },
   {
     "id": "p3",
@@ -66,10 +133,23 @@
     "category": "로컬 와인",
     "image": "assets/products/sanmeoru_wine.png",
     "badges": [
-      "선물용"
+      "선물용추천"
     ],
-    "description": "파주의 높은 일교차가 만든 달콤한 산머루로 빚은 와인. 감악산 터널 숙성으로 깊은 풍미를 자랑합니다.",
-    "farmerId": "f6"
+    "description": "파주의 높은 일교차가 만들어낸 당도 높은 산머루. 감악산 터널에서 숙성하여 깊고 그윽한 풍미를 자랑합니다.",
+    "trans": {
+      "en": {
+        "name": "Paju Wild Grape Wine Premium",
+        "description": "Sweet wild grape wine aged in Gamaksan tunnels. Boasts a deep flavor."
+      },
+      "jp": {
+        "name": "山葡萄ワイナリーツアー",
+        "description": "坡州の大きな日較差が作り出した高糖度の山葡萄。紺岳山トンネルで熟成し、深く幽玄な風味を誇ります。"
+      },
+      "cn": {
+        "name": "坡州山葡萄红酒 Premium",
+        "description": "坡州巨大的昼夜温差造就的高糖度山葡萄。在绀岳山隧道熟成，散发深邃幽雅的风味。"
+      }
+    }
   },
   {
     "id": "c1",
@@ -78,10 +158,24 @@
     "category": "비건 디저트",
     "image": "assets/products/bean_roll_cake.png",
     "badges": [
-      "비건"
+      "비건인증",
+      "글루텐프리"
     ],
-    "description": "[서울 추천] 우유 대신 고소한 장단콩 크림을 가득 채운 글루텐프리 디저트. 속 편한 달콤함.",
-    "farmerId": "f7"
+    "description": "[글루텐 프리] 우유 버터 없이도 충분히 부드러운. 장단콩의 고소함을 가득 채운 비건 디저트.",
+    "trans": {
+      "en": {
+        "name": "Jangdan Bean Vegan Cream Roll",
+        "description": "Gluten-free dessert filled with nutty bean cream instead of milk. Comfortable sweetness."
+      },
+      "jp": {
+        "name": "長湍豆ヴィーガンクリームロール",
+        "description": "【グルテンフリー】牛乳・バターなしでも十分に柔らかい。長湍豆の香ばしさを満たしたヴィーガンデザート。"
+      },
+      "cn": {
+        "name": "长湍豆纯素奶油卷蛋糕",
+        "description": "[无麸质]即使没有牛奶黄油也足够柔软。充满长湍豆香气的纯素甜点。"
+      }
+    }
   },
   {
     "id": "c2",
@@ -90,47 +184,98 @@
     "category": "모닝 루틴",
     "image": "assets/products/morning_shake.png",
     "badges": [
-      "데일리"
+      "DAILY"
     ],
-    "description": "바쁜 아침, 위장을 감싸주는 DMZ 한 모금. 장단콩의 고소함이 마의 식감을 부드럽게 감싸줍니다.",
-    "farmerId": "f8"
+    "description": "바쁜 아침, 위장을 보호하는 DMZ 한 잔. 장단콩의 고소함이 마의 식감을 부드럽게 감싸줍니다.",
+    "trans": {
+      "en": {
+        "name": "DMZ Morning Shake (Yam+Bean)",
+        "description": "A sip of DMZ for your busy morning stomach. Nutty beans soften the texture of yam."
+      },
+      "jp": {
+        "name": "DMZモーニングシェイク (長芋+豆)",
+        "description": "忙しい朝、胃腸を保護するDMZ一杯。長湍豆の香ばしさが長芋の食感を優しく包み込みます。"
+      },
+      "cn": {
+        "name": "DMZ 早晨奶昔 (山药+豆)",
+        "description": "繁忙的早晨，保护肠胃的DMZ一杯。长湍豆的香气柔和地包裹住山药的口感。"
+      }
+    }
   },
   {
     "id": "c5",
-    "name": "애플 소이 약과 (Apple Soy)",
+    "name": "달콤 파주 사과 약과 (Apple Soy)",
     "price": 12000,
     "category": "인기 간식",
     "image": "assets/products/apple_yakgwa.png",
     "badges": [
-      "트렌디"
+      "K-디저트"
     ],
     "description": "파주 사과 조청의 달콤함과 장단콩의 고소함이 만난 퓨전 약과. 할매니얼 입맛 저격!",
-    "farmerId": "f9"
+    "trans": {
+      "en": {
+        "name": "Apple Soy Yakgwa",
+        "description": "Fusion Yakgwa meeting sweet Paju apple syrup and nutty beans. Perfect for K-dessert lovers!"
+      },
+      "jp": {
+        "name": "甘い坡州リンゴ薬果 (Apple Soy)",
+        "description": "坡州リンゴ水飴の甘さと長湍豆の香ばしさが出会ったフュージョン薬果。ハルメニアルの好みを狙撃！"
+      },
+      "cn": {
+        "name": "香甜坡州苹果药果 (Apple Soy)",
+        "description": "坡州苹果糖浆的甜味与长湍豆的香气相遇的融合药果。狙击复古口味！"
+      }
+    }
   },
   {
     "id": "e1",
-    "name": "삼오팜 딸기 수확 & 디저트 체험",
+    "name": "감자 캐기 & 팜크닉 (1인)",
     "price": 25000,
-    "category": "딸기 농장",
+    "category": "이색 체험",
     "image": "assets/images/strawberry_farm_experience.png",
     "badges": [
-      "가족",
-      "베스트"
+      "아이체험강추"
     ],
-    "description": "3.5kg 딸기 수확 + 딸기 아이스크림 만들기! 아이들이 가장 좋아하는 겨울 필수 코스입니다.",
-    "farmerId": "f10"
+    "description": "파주의 흙을 만지며 수확의 기쁨을 느껴보세요. 유기농 채소 비빔밥 점심이 포함되어 있습니다.",
+    "trans": {
+      "en": {
+        "name": "Strawberry Picking & Dessert (1 Person)",
+        "description": "Harvest strawberries and make ice cream! The kids' favorite winter course."
+      },
+      "jp": {
+        "name": "イチゴ狩り & デザート体験 (1人)",
+        "description": "イチゴ狩りとアイスクリーム作り！子供たちが大好きな冬の必須コース。"
+      },
+      "cn": {
+        "name": "草莓采摘 & 甜点体验 (1人)",
+        "description": "采摘草莓 + 制作草莓冰淇淋！孩子们最喜欢的冬季必选路线。"
+      }
+    }
   },
   {
     "id": "e2",
-    "name": "동화힐링캠프 별밤 글램핑 (1박)",
+    "name": "별밤 글램핑 (1박)",
     "price": 150000,
     "category": "캠핑",
     "image": "assets/images/starlight_camping.png",
     "badges": [
-      "예약 필수"
+      "커플추천"
     ],
-    "description": "장비 없이 떠나는 산속 힐링. 쏟아지는 별빛 아래, 모닥불과 함께하는 낭만적인 하룻밤.",
-    "farmerId": "f11"
+    "description": "쏟아지는 별빛 아래, 장작불과 함께하는 낭만적인 밤을 선물합니다.",
+    "trans": {
+      "en": {
+        "name": "Starlight Glamping (1 Night)",
+        "description": "A romantic night with a campfire under the pouring starlight."
+      },
+      "jp": {
+        "name": "星月夜グランピング (1泊)",
+        "description": "降り注ぐ星空の下、焚き火と共に過ごすロマンチックな夜をプレゼントします。"
+      },
+      "cn": {
+        "name": "星夜豪华露营 (1晚)",
+        "description": "在倾泻的星光下，献上与柴火共度的浪漫之夜。"
+      }
+    }
   },
   {
     "id": "e3",
@@ -139,35 +284,74 @@
     "category": "낙농 체험",
     "image": "assets/images/cheese_making_experience.png",
     "badges": [
-      "어린이"
+      "아이체험강추"
     ],
     "description": "송아지 우유 주기부터 자연 치즈로 피자 만들기까지! 직접 만든 피자로 맛있는 점심을 즐기세요.",
-    "farmerId": "f12"
+    "trans": {
+      "en": {
+        "name": "Goguryeo Ranch Cheese Pizza Making",
+        "description": "Feed calves and make pizza with natural cheese! Enjoy lunch with your own pizza."
+      },
+      "jp": {
+        "name": "高句麗牧場チーズピザ作り",
+        "description": "子牛へのミルクやりから自然チーズでのピザ作りまで！手作りピザで美味しいランチを楽しんでください。"
+      },
+      "cn": {
+        "name": "高句丽牧场奶酪披萨制作",
+        "description": "从给小牛喂奶到用天然奶酪制作披萨！用亲手制作的披萨享受美味午餐。"
+      }
+    }
   },
   {
     "id": "e4",
-    "name": "산머루마을 와이너리 투어",
+    "name": "산머루 와이너리 투어",
     "price": 20000,
     "category": "와이너리 투어",
     "image": "assets/products/sanmeoru_wine.png",
     "badges": [
-      "커플"
+      "이색데이트"
     ],
-    "description": "신비로운 지하 와인 터널 투어와 나만의 머루 와인 만들기. 연인들의 데이트 코스로 추천합니다.",
-    "farmerId": "f13"
+    "description": "신비한 지하 와인 터널 투어와 나만의 와인 만들기 체험. 연인들의 데이트 코스로 강력 추천합니다.",
+    "trans": {
+      "en": {
+        "name": "Sanmeoru Winery Tour",
+        "description": "Mysterious underground wine tunnel tour and making your own wine. Recommended for couples."
+      },
+      "jp": {
+        "name": "山葡萄ワイナリーツアー",
+        "description": "神秘的な地下ワイントンネルツアーと自分だけのワイン作り体験。恋人たちのデートコースとして強くお勧めします。"
+      },
+      "cn": {
+        "name": "山葡萄以酒庄巡游",
+        "description": "神秘的地下红酒隧道游览和制作专属红酒体验。强烈推荐作为情侣约会路线。"
+      }
+    }
   },
   {
     "id": "cp1",
-    "name": "더시크릿가든 캠핑장",
+    "name": "시크릿가든 캠핑장",
     "price": 60000,
     "category": "캠핑",
     "image": "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80",
     "badges": [
-      "커플",
+      "프라이빗",
       "수영장"
     ],
-    "description": "감성적인 분위기의 캠핑장. 개별 바비큐장, 수영장, 감성 카페가 있어 커플 여행에 최적입니다.",
-    "farmerId": "cp1"
+    "description": "감악산 자락에 위치한 프라이빗 캠핑장. 개별 바베큐장과 수영장, 감성 카페를 갖춘 럭셔리 휴양지.",
+    "trans": {
+      "en": {
+        "name": "The Secret Garden Camping",
+        "description": "Emotional atmosphere camping. Best for couples with private BBQ, pool, and cafe."
+      },
+      "jp": {
+        "name": "シークレットガーデンキャンプ場",
+        "description": "紺岳山の麓に位置するプライベートキャンプ場。個別のバーベキュー場とプール、感性カフェを備えたラグジュアリーリゾート。"
+      },
+      "cn": {
+        "name": "秘密花园露营地",
+        "description": "位于绀岳山脚下的私人露营地。配备独立烧烤场、游泳池和感性咖啡厅的豪华度假地。"
+      }
+    }
   },
   {
     "id": "cp2",
@@ -176,11 +360,24 @@
     "category": "캠핑",
     "image": "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=800&q=80",
     "badges": [
-      "반려동물",
-      "자연"
+      "식물원뷰",
+      "반려동물"
     ],
-    "description": "수목원 내에 위치하여 자연 친화적입니다. 반려견 동반이 가능해 온 가족이 함께할 수 있습니다.",
-    "farmerId": "cp2"
+    "description": "수목원 내에 위치해 완벽한 숲캉스를 즐길 수 있습니다. 반려동물 동반이 가능해 온 가족이 행복한 시간을 보낼 수 있습니다.",
+    "trans": {
+      "en": {
+        "name": "Byeokchoji Arboretum Camping",
+        "description": "Located inside the arboretum for nature lovers. Pet-friendly for the whole family."
+      },
+      "jp": {
+        "name": "碧草池樹木園キャンプ場",
+        "description": "樹木園内に位置し、完璧な森休みを楽しめます。ペット同伴が可能で、全家族が幸せな時間を過ごせます。"
+      },
+      "cn": {
+        "name": "碧草池树木园露营地",
+        "description": "位于树木园内，可享受完美的森林度假。允许携带宠物，全家人可以共度幸福时光。"
+      }
+    }
   },
   {
     "id": "cp3",
@@ -189,24 +386,50 @@
     "category": "캠핑",
     "image": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80",
     "badges": [
-      "계곡",
-      "여름"
+      "계곡물놀이",
+      "샤워장"
     ],
-    "description": "계곡 바로 옆에 위치해 여름철 물놀이에 제격입니다. 무료 샤워실과 바비큐장을 갖췄습니다.",
-    "farmerId": "cp3"
+    "description": "계곡 바로 옆에 있어 여름철 물놀이에 최적화된 곳. 깨끗한 샤워시설과 바베큐장이 준비되어 있습니다.",
+    "trans": {
+      "en": {
+        "name": "Gamaksan Camping",
+        "description": "Located right next to the valley, perfect for summer swimming. Free showers and BBQ."
+      },
+      "jp": {
+        "name": "紺岳山キャンプ場",
+        "description": "渓谷のすぐ横にあり、夏の水遊びに最適化された場所。清潔なシャワー施設とバーベキュー場が用意されています。"
+      },
+      "cn": {
+        "name": "绀岳山露营地",
+        "description": "紧邻溪谷，非常适合夏季玩水。准备了干净的淋浴设施和烧烤场。"
+      }
+    }
   },
   {
     "id": "cp4",
-    "name": "평화누리캠핑장",
+    "name": "평화누리 캠핑장",
     "price": 30000,
     "category": "캠핑",
     "image": "https://images.unsplash.com/photo-1537905569824-f89f14cceb68?auto=format&fit=crop&w=800&q=80",
     "badges": [
-      "조용한",
-      "넓은 공간"
+      "넓은공간",
+      "조용한"
     ],
-    "description": "넓은 사이트와 한적한 분위기. 조용한 휴식을 원하는 캠퍼들에게 추천하는 평화루니 캠핑장.",
-    "farmerId": "cp4"
+    "description": "평화 누리 공원의 넓은 잔디밭에서 즐기는 여유로운 캠핑. 탁 트인 시야와 조용한 휴식을 원하는 캠퍼들에게 추천.",
+    "trans": {
+      "en": {
+        "name": "Imjingak Peace Camping",
+        "description": "Spacious sites and a quiet atmosphere. Recommended for campers seeking peaceful rest."
+      },
+      "jp": {
+        "name": "平和ヌリキャンプ場",
+        "description": "平和ヌリ公園の広い芝生で楽しむゆったりとしたキャンプ。広々とした視界と静かな休息を望むキャンパーにおすすめ。"
+      },
+      "cn": {
+        "name": "和平Nuri露营地",
+        "description": "在和平Nuri公园广阔的草坪上享受悠闲的露营。推荐给想要开阔视野和安静休息的露营者。"
+      }
+    }
   },
   {
     "id": "cp5",
@@ -215,11 +438,24 @@
     "category": "캠핑",
     "image": "assets/images/dmz_camping_gen.png",
     "badges": [
-      "이색체험",
-      "역사"
+      "안보관광",
+      "텐트대여"
     ],
-    "description": "DMZ 인근에서 즐기는 특별한 캠핑. 안보 관광과 함께 전통 텐트 체험이 가능합니다.",
-    "farmerId": "cp5"
+    "description": "DMZ 접경 지역에서 즐기는 이색적인 캠핑. 안보 관광과 함께 특별한 추억을 만들 수 있습니다.",
+    "trans": {
+      "en": {
+        "name": "DMZ Camping",
+        "description": "Special camping near the DMZ. Combine security tourism with traditional tent experience."
+      },
+      "jp": {
+        "name": "DMZキャンプ場",
+        "description": "DMZ接境地域で楽しむ異色キャンプ。安保観光と共に特別な思い出を作ることができます。"
+      },
+      "cn": {
+        "name": "DMZ露营地",
+        "description": "在DMZ边境地区享受的特色露营。可以结合安保旅游创造特别的回忆。"
+      }
+    }
   },
   {
     "id": "cp6",
@@ -228,23 +464,49 @@
     "category": "글램핑",
     "image": "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=800&q=80",
     "badges": [
-      "럭셔리",
-      "편리함"
+      "호텔식",
+      "개별화장실"
     ],
-    "description": "럭셔리한 글램핑 시설과 개별 화장실 완비. 장비 없는 초보자도 호텔처럼 편하게 즐기세요.",
-    "farmerId": "cp6"
+    "description": "호텔식 침구와 개별 화장실을 갖춘 럭셔리 글램핑. 텐트가 없어도, 캠핑 장비가 없어도 누구나 즐길 수 있습니다.",
+    "trans": {
+      "en": {
+        "name": "Paju Glamping Village",
+        "description": "Luxury glamping facilities with private restrooms. Enjoy like a hotel even if you're a beginner."
+      },
+      "jp": {
+        "name": "坡州グランピングビレッジ",
+        "description": "ホテル式寝具と個別トイレを備えたラグジュアリーグランピング。テントがなくても、キャンプ装備がなくても誰でも楽しめます。"
+      },
+      "cn": {
+        "name": "坡州豪华露营村",
+        "description": "配备酒店式寝具和独立卫生间的豪华露营。即使没有帐篷，没有露营装备，任何人都可以享受。"
+      }
+    }
   },
   {
     "id": "cp7",
-    "name": "오토캠핑숲",
+    "name": "오토 캠핑 숲",
     "price": 50000,
     "category": "오토캠핑",
     "image": "assets/images/korean_car_camping.png",
     "badges": [
-      "차박",
+      "차박가능",
       "수영장"
     ],
-    "description": "대형 오토캠핑 구역과 수영장을 갖춘 곳. 차박과 물놀이를 동시에 즐기고 싶은 분들께 추천.",
-    "farmerId": "cp7"
+    "description": "넓은 오토 캠핑 사이트와 수영장을 갖춘 숲속 캠핑장. 차박을 즐기는 분들에게 최적화된 공간입니다.",
+    "trans": {
+      "en": {
+        "name": "Auto Camping Forest",
+        "description": "Equipped with large auto camping zones and a pool. Recommended for car camping and swimming."
+      },
+      "jp": {
+        "name": "オートキャンプの森",
+        "description": "広いオートキャンプサイトとプールを備えた森の中のキャンプ場。車中泊を楽しむ方々に最適化された空間です。"
+      },
+      "cn": {
+        "name": "汽车露营森林",
+        "description": "拥有宽敞的汽车露营营位和游泳池的森林露营地。是享受车中泊的人们的最佳空间。"
+      }
+    }
   }
 ]

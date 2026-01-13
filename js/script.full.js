@@ -850,13 +850,44 @@ function initHeader() {
      }
 }
 
+const badgeTranslations = {
+     "베스트셀러": { en: "Best Seller", jp: "ベストセラー", cn: "畅销" },
+     "임금님 진상": { en: "King's Choice", jp: "王様への献上", cn: "进贡贡品" },
+     "면역력강화": { en: "Immunity Boost", jp: "免疫力強化", cn: "增强免疫力" },
+     "무농약인증": { en: "Pesticide Free", jp: "無農薬認証", cn: "无农药认证" },
+     "숙취해소": { en: "Hangover Cure", jp: "二日酔い解消", cn: "解酒" },
+     "이너뷰티": { en: "Inner Beauty", jp: "インナービューティー", cn: "内在美" },
+     "위장보호": { en: "Stomach Care", jp: "胃腸保護", cn: "保护胃肠" },
+     "선물용추천": { en: "Best Gift", jp: "ギフト推奨", cn: "推荐礼品" },
+     "비건인증": { en: "Vegan", jp: "ヴィーガン", cn: "纯素认证" },
+     "글루텐프리": { en: "Gluten Free", jp: "グルテンフリー", cn: "无麸质" },
+     "DAILY": { en: "Daily", jp: "デイリー", cn: "日常" },
+     "K-디저트": { en: "K-Dessert", jp: "K-デザート", cn: "K-甜点" },
+     "아이체험강추": { en: "Kids Favorite", jp: "子供体験推奨", cn: "强推儿童体验" },
+     "커플추천": { en: "For Couples", jp: "カップル推奨", cn: "推荐情侣" },
+     "이색데이트": { en: "Unique Date", jp: "異色デート", cn: "特色约会" },
+     "프라이빗": { en: "Private", jp: "プライベート", cn: "私密" },
+     "수영장": { en: "Pool", jp: "プール", cn: "游泳池" },
+     "식물원뷰": { en: "Garden View", jp: "植物園ビュー", cn: "植物园景观" },
+     "반려동물": { en: "Pet Friendly", jp: "ペット同伴可", cn: "允许宠物" },
+     "계곡물놀이": { en: "Valley Water", jp: "渓谷水遊び", cn: "溪谷玩水" },
+     "샤워장": { en: "Shower", jp: "シャワー", cn: "淋浴场" },
+     "넓은공간": { en: "Spacious", jp: "広い空間", cn: "宽敞空间" },
+     "조용한": { en: "Quiet", jp: "静かな", cn: "安静" },
+     "안보관광": { en: "Security Tour", jp: "安保観光", cn: "安保旅游" },
+     "텐트대여": { en: "Tent Rental", jp: "テントレンタル", cn: "帐篷租赁" },
+     "호텔식": { en: "Hotel Style", jp: "ホテル式", cn: "酒店式" },
+     "개별화장실": { en: "Private Toilet", jp: "個別トイレ", cn: "独立卫生间" },
+     "차박가능": { en: "Car Camping", jp: "車中泊可能", cn: "可车中泊" }
+};
+
 function renderProductCard(product) {
      const t = (product.trans && product.trans[currentLang]) || {};
      const name = t.name || product.name;
      const desc = t.description || product.description;
 
      const badgeHtml = product.badges && product.badges.length > 0
-          ? `<div class="badge" style="position: absolute; top: 12px; left: 12px; background: #C19A6B; color: white; padding: 4px 8px; font-size: 0.7rem; font-weight: 700; border-radius: 4px; z-index: 2; letter-spacing: 0.05em;">${product.badges[0]}</div>`
+          ? `<div class="badge" style="position: absolute; top: 12px; left: 12px; background: #C19A6B; color: white; padding: 4px 8px; font-size: 0.7rem; font-weight: 700; border-radius: 4px; z-index: 2; letter-spacing: 0.05em;">${(badgeTranslations[product.badges[0]] && badgeTranslations[product.badges[0]][currentLang]) || product.badges[0]}</div>`
           : '';
 
      return `
@@ -1039,7 +1070,7 @@ function renderExperienceCard(item) {
      let badgeHtml = '';
      if (item.badges && item.badges.length > 0) {
           badgeHtml = item.badges.map(b =>
-               `<span style="background: white; color: var(--color-primary); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-right: 6px;">${b}</span>`
+               `<span style="background: white; color: var(--color-primary); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-right: 6px;">${(badgeTranslations[b] && badgeTranslations[b][currentLang]) || b}</span>`
           ).join('');
      }
 
