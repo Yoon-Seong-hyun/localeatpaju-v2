@@ -755,7 +755,7 @@ async function getProducts() {
                     "name": "DMZ 캠핑장",
                     "price": 35000,
                     "category": "캠핑",
-                    "image": "https://images.unsplash.com/photo-1496545672479-7ac37ea8a0ea?auto=format&fit=crop&w=800&q=80",
+                    "image": "assets/images/dmz_camping_gen.png",
                     "badges": ["안보관광", "텐트대여"],
                     "description": "DMZ 접경 지역에서 즐기는 이색적인 캠핑. 안보 관광과 함께 특별한 추억을 만들 수 있습니다.",
                     "trans": {
@@ -783,7 +783,7 @@ async function getProducts() {
                     "name": "오토 캠핑 숲",
                     "price": 50000,
                     "category": "오토캠핑",
-                    "image": "https://images.unsplash.com/photo-1526491109672-74740652028d?auto=format&fit=crop&w=800&q=80",
+                    "image": "assets/images/korean_car_camping.png",
                     "badges": ["차박가능", "수영장"],
                     "description": "넓은 오토 캠핑 사이트와 수영장을 갖춘 숲속 캠핑장. 차박을 즐기는 분들에게 최적화된 공간입니다.",
                     "trans": {

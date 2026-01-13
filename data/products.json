@@ -213,7 +213,7 @@
     "name": "DMZ 캠핑장",
     "price": 35000,
     "category": "캠핑",
-    "image": "https://images.unsplash.com/photo-1496545672479-7ac37ea8a0ea?auto=format&fit=crop&w=800&q=80",
+    "image": "assets/images/dmz_camping_gen.png",
     "badges": [
       "이색체험",
       "역사"
@@ -239,7 +239,7 @@
     "name": "오토캠핑숲",
     "price": 50000,
     "category": "오토캠핑",
-    "image": "https://images.unsplash.com/photo-1526491109672-74740652028d?auto=format&fit=crop&w=800&q=80",
+    "image": "assets/images/korean_car_camping.png",
     "badges": [
       "차박",
       "수영장"
