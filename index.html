@@ -12,18 +12,51 @@
 
 <body>
 
-     <!-- Language Switcher (Fixed Top Right) -->
-     <div class="lang-dropdown-wrapper">
-          <button class="lang-btn"
-               style="background: rgba(0,0,0,0.3); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-               <i class="fas fa-globe"></i> <span id="current-lang-label">KOREAN</span> <i class="fas fa-chevron-down"
-                    style="font-size: 0.7rem;"></i>
-          </button>
-          <div class="lang-menu">
-               <button class="lang-item active" onclick="changeLanguage('ko')">🇰🇷 Korean</button>
-               <button class="lang-item" onclick="changeLanguage('en')">🇺🇸 English</button>
-               <button class="lang-item" onclick="changeLanguage('jp')">🇯🇵 Japanese</button>
-               <button class="lang-item" onclick="changeLanguage('cn')">🇨🇳 Chinese</button>
+     <!-- Top Right Controls (Weather + Language) -->
+     <div class="top-controls"
+          style="position: absolute; top: 24px; right: 24px; z-index: 2000; display: flex; align-items: center; gap: 12px;">
+
+          <!-- Weather Widget -->
+          <div class="weather-container" style="position: relative;">
+               <button id="weather-btn" class="weather-btn" onclick="toggleWeather()"
+                    style="background: rgba(0,0,0,0.3); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 6px 14px; color: white; display: flex; align-items: center; gap: 8px; cursor: pointer; transition: all 0.3s ease;">
+                    <i id="weather-icon-main" class="fas fa-cloud-sun" style="font-size: 1rem;"></i>
+                    <div style="text-align: left; line-height: 1;">
+                         <span id="weather-temp-main" style="font-weight: 700; font-size: 0.9rem;">--°C</span>
+                         <span style="display: block; font-size: 0.65rem; opacity: 0.9; margin-top: 2px;">Paju</span>
+                    </div>
+               </button>
+
+               <!-- Weekly Forecast Popup -->
+               <div id="weather-popup" class="weather-popup"
+                    style="position: absolute; top: 100%; right: 0; margin-top: 12px; background: white; width: 280px; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; color: #333; z-index: 2001;">
+                    <div
+                         style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border-bottom: 1px solid #eee; padding-bottom: 12px;">
+                         <h4 style="margin: 0; font-size: 1rem; color: #333;">파주 금촌동 주간 날씨</h4>
+                         <i class="fas fa-times" onclick="toggleWeather()" style="cursor: pointer; color: #999;"></i>
+                    </div>
+                    <div id="weekly-forecast-list" style="display: flex; flex-direction: column; gap: 12px;">
+                         <!-- Forecast items injected by JS -->
+                         <div style="text-align: center; color: #999; padding: 20px;">
+                              <i class="fas fa-spinner fa-spin"></i> 날씨 정보 로딩중...
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+          <!-- Language Switcher -->
+          <div class="lang-dropdown-wrapper" style="position: relative; top: auto; right: auto;">
+               <button class="lang-btn"
+                    style="background: rgba(0,0,0,0.3); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                    <i class="fas fa-globe"></i> <span id="current-lang-label">KOREAN</span> <i
+                         class="fas fa-chevron-down" style="font-size: 0.7rem;"></i>
+               </button>
+               <div class="lang-menu">
+                    <button class="lang-item active" onclick="changeLanguage('ko')">🇰🇷 Korean</button>
+                    <button class="lang-item" onclick="changeLanguage('en')">🇺🇸 English</button>
+                    <button class="lang-item" onclick="changeLanguage('jp')">🇯🇵 Japanese</button>
+                    <button class="lang-item" onclick="changeLanguage('cn')">🇨🇳 Chinese</button>
+               </div>
           </div>
      </div>
 

@@ -1367,6 +1367,97 @@ document.addEventListener('DOMContentLoaded', async () => {
      // Load saved language preference
      const savedLang = localStorage.getItem('preferredLang');
      if (savedLang && translations[savedLang]) {
+
+          // --- Weather Widget Logic ---
+          const weatherCodeMap = {
+               0: { icon: 'fa-sun', desc: '맑음' },
+               1: { icon: 'fa-cloud-sun', desc: '대체로 맑음' },
+               2: { icon: 'fa-cloud', desc: '구름 많음' },
+               3: { icon: 'fa-cloud', desc: '흐림' },
+               45: { icon: 'fa-smog', desc: '안개' },
+               48: { icon: 'fa-smog', desc: '안개' },
+               51: { icon: 'fa-cloud-rain', desc: '이슬비' },
+               53: { icon: 'fa-cloud-rain', desc: '이슬비' },
+               55: { icon: 'fa-cloud-rain', desc: '이슬비' },
+               61: { icon: 'fa-umbrella', desc: '비' },
+               63: { icon: 'fa-umbrella', desc: '비' },
+               65: { icon: 'fa-umbrella', desc: '비' },
+               71: { icon: 'fa-snowflake', desc: '눈' },
+               73: { icon: 'fa-snowflake', desc: '눈' },
+               75: { icon: 'fa-snowflake', desc: '눈' },
+               80: { icon: 'fa-cloud-showers-heavy', desc: '소나기' },
+               81: { icon: 'fa-cloud-showers-heavy', desc: '소나기' },
+               82: { icon: 'fa-cloud-showers-heavy', desc: '소나기' },
+               95: { icon: 'fa-bolt', desc: '뇌우' },
+               96: { icon: 'fa-bolt', desc: '뇌우, 우박' },
+               99: { icon: 'fa-bolt', desc: '뇌우, 우박' }
+          };
+
+          const dayNames = ['일', '월', '화', '수', '목', '금', '토'];
+
+          async function initWeather() {
+               try {
+                    // Fetch Paju (Geumchon-dong) weather: Lat 37.7608, Lon 126.7735
+                    const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=37.7608&longitude=126.7735&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Asia%2FSeoul');
+                    const data = await response.json();
+
+                    if (data && data.current) {
+                         // Update Main Widget
+                         const currentTemp = Math.round(data.current.temperature_2m);
+                         const currentCode = data.current.weather_code;
+                         const weatherInfo = weatherCodeMap[currentCode] || { icon: 'fa-cloud', desc: '흐림' };
+
+                         document.getElementById('weather-temp-main').innerText = `${currentTemp}°C`;
+                         document.getElementById('weather-icon-main').className = `fas ${weatherInfo.icon}`;
+
+                         // Build Weekly Forecast
+                         if (data.daily) {
+                              const listEl = document.getElementById('weekly-forecast-list');
+                              listEl.innerHTML = ''; // Clear loading
+
+                              // Loop through 5 days
+                              for (let i = 0; i < 5; i++) {
+                                   const dateStr = data.daily.time[i];
+                                   const dateObj = new Date(dateStr);
+                                   const dayName = dayNames[dateObj.getDay()];
+                                   const maxTemp = Math.round(data.daily.temperature_2m_max[i]);
+                                   const minTemp = Math.round(data.daily.temperature_2m_min[i]);
+                                   const code = data.daily.weather_code[i];
+                                   const icon = (weatherCodeMap[code] || { icon: 'fa-cloud' }).icon;
+
+                                   const itemHtml = `
+                        <div class="forecast-item">
+                            <span class="forecast-day">${i === 0 ? '오늘' : dayName}</span>
+                            <div class="forecast-icon"><i class="fas ${icon}"></i></div>
+                            <span class="forecast-temp">${minTemp}° / ${maxTemp}°</span>
+                        </div>
+                    `;
+                                   listEl.insertAdjacentHTML('beforeend', itemHtml);
+                              }
+                         }
+                    }
+               } catch (error) {
+                    console.error('Weather fetch error:', error);
+                    document.getElementById('weather-temp-main').innerText = '--';
+               }
+          }
+
+          function toggleWeather() {
+               const popup = document.getElementById('weather-popup');
+               popup.classList.toggle('active');
+          }
+
+          // Close popup when clicking outside
+          document.addEventListener('click', function (event) {
+               const header = document.querySelector('.weather-container');
+               const popup = document.getElementById('weather-popup');
+               if (!header.contains(event.target) && popup.classList.contains('active')) {
+                    popup.classList.remove('active');
+               }
+          });
+
+          // Initialize Weather
+          initWeather();
           changeLanguage(savedLang);
      }
 
