@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>LocaleatPAJU - IR Pitch Deck</title>
+     <!-- Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Pretendard:wght@300;400;600;800&display=swap"
+          rel="stylesheet">
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <!-- Base Styles -->
+     <link rel="stylesheet" href="css/style.css">
+
+     <style>
+          /* Presentation Specific Styles */
+          body {
+               overflow: hidden;
+               background-color: #fdfbf7;
+          }
+
+          #presentation-container {
+               width: 100vw;
+               height: 100vh;
+               position: relative;
+               overflow: hidden;
+          }
+
+          .slide {
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               opacity: 0;
+               transform: translateY(20px);
+               transition: opacity 0.6s ease, transform 0.6s ease;
+               pointer-events: none;
+               padding: 40px;
+               box-sizing: border-box;
+               background-image:
+                    radial-gradient(circle at 10% 20%, rgba(85, 107, 47, 0.03) 0%, transparent 20%),
+                    radial-gradient(circle at 90% 80%, rgba(193, 154, 107, 0.05) 0%, transparent 20%);
+          }
+
+          .slide.active {
+               opacity: 1;
+               transform: translateY(0);
+               pointer-events: all;
+               z-index: 10;
+          }
+
+          .slide-bg-brand {
+               background-color: var(--color-primary);
+               color: white;
+               text-align: center;
+          }
+
+          .slide-bg-brand h1,
+          .slide-bg-brand p {
+               color: white;
+          }
+
+          /* Typography Override for Presentation */
+          h1.slide-title {
+               font-family: var(--font-serif);
+               font-size: 3.5rem;
+               margin-bottom: 1rem;
+               color: var(--color-primary-dark);
+               text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+          }
+
+          h2.slide-sub {
+               font-family: var(--font-main);
+               font-size: 1.5rem;
+               color: var(--color-accent);
+               letter-spacing: 0.1em;
+               text-transform: uppercase;
+               margin-bottom: 3rem;
+               font-weight: 600;
+          }
+
+          h3.section-header {
+               font-family: var(--font-serif);
+               font-size: 2.2rem;
+               color: var(--color-primary);
+               margin-bottom: 40px;
+               position: relative;
+               display: inline-block;
+          }
+
+          h3.section-header::after {
+               content: '';
+               display: block;
+               width: 60px;
+               height: 3px;
+               background: var(--color-accent);
+               margin: 10px auto 0;
+          }
+
+          /* Specific Slide Designs */
+
+          /* Slide 1: Cover */
+          .brand-logo-large {
+               font-family: var(--font-serif);
+               font-size: 5rem;
+               font-weight: 700;
+               margin-bottom: 20px;
+               letter-spacing: -0.02em;
+          }
+
+          .presenter-info {
+               position: absolute;
+               bottom: 50px;
+               right: 60px;
+               text-align: right;
+               font-size: 1rem;
+               opacity: 0.8;
+               font-weight: 300;
+          }
+
+          /* Slide 2: Problem - Cards */
+          .card-container {
+               display: flex;
+               gap: 30px;
+               max-width: 1200px;
+               width: 100%;
+               justify-content: center;
+          }
+
+          .problem-card {
+               background: white;
+               padding: 40px 30px;
+               border-radius: 16px;
+               box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+               text-align: center;
+               flex: 1;
+               transition: transform 0.3s;
+               border-top: 5px solid #ddd;
+          }
+
+          .problem-card:hover {
+               transform: translateY(-10px);
+               border-top-color: var(--color-accent);
+          }
+
+          .problem-icon {
+               font-size: 3rem;
+               color: #ccc;
+               margin-bottom: 20px;
+          }
+
+          /* Slide 3: Solution - Contrast */
+          .solution-contrast {
+               display: flex;
+               align-items: center;
+               gap: 50px;
+               width: 100%;
+               max-width: 1000px;
+          }
+
+          .vs-circle {
+               background: var(--color-accent);
+               color: white;
+               width: 60px;
+               height: 60px;
+               border-radius: 50%;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               font-weight: bold;
+               font-size: 1.2rem;
+               flex-shrink: 0;
+          }
+
+          .solution-box {
+               flex: 1;
+               padding: 40px;
+               border-radius: 20px;
+          }
+
+          .sol-old {
+               background: #f0f0f0;
+               color: #888;
+          }
+
+          .sol-new {
+               background: var(--color-primary);
+               color: white;
+               box-shadow: 0 20px 50px rgba(47, 79, 79, 0.3);
+          }
+
+          /* Slide 4: Differentiation - Circle Icons */
+          .diff-container {
+               display: flex;
+               justify-content: space-around;
+               width: 100%;
+               max-width: 1200px;
+          }
+
+          .diff-item {
+               text-align: center;
+               width: 30%;
+          }
+
+          .diff-icon-circle {
+               width: 120px;
+               height: 120px;
+               background: white;
+               border: 2px solid var(--color-accent);
+               border-radius: 50%;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               margin: 0 auto 20px;
+               font-size: 3rem;
+               color: var(--color-primary);
+               box-shadow: 0 10px 20px rgba(193, 154, 107, 0.2);
+          }
+
+          /* Slide 5: Tech Stack */
+          .tech-grid {
+               display: grid;
+               grid-template-columns: repeat(2, 1fr);
+               gap: 30px;
+               max-width: 1000px;
+               width: 100%;
+          }
+
+          .tech-item {
+               background: white;
+               padding: 25px;
+               border-radius: 12px;
+               display: flex;
+               align-items: center;
+               box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+          }
+
+          .tech-item i {
+               font-size: 2rem;
+               color: var(--color-accent);
+               margin-right: 20px;
+               width: 40px;
+               text-align: center;
+          }
+
+          /* Slide 6: Impact */
+          .impact-numbers {
+               display: flex;
+               gap: 80px;
+               margin-bottom: 50px;
+          }
+
+          .impact-box {
+               text-align: center;
+          }
+
+          .big-number {
+               font-family: var(--font-serif);
+               font-size: 5rem;
+               color: var(--color-primary);
+               font-weight: 700;
+               line-height: 1;
+          }
+
+          .big-label {
+               font-size: 1.2rem;
+               color: #666;
+               margin-top: 10px;
+          }
+
+          /* Controls */
+          .controls {
+               position: absolute;
+               bottom: 30px;
+               left: 50%;
+               transform: translateX(-50%);
+               display: flex;
+               gap: 20px;
+               z-index: 100;
+          }
+
+          .ctrl-btn {
+               background: rgba(0, 0, 0, 0.1);
+               border: none;
+               width: 50px;
+               height: 50px;
+               border-radius: 50%;
+               cursor: pointer;
+               transition: background 0.3s;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               color: var(--color-primary);
+               font-size: 1.2rem;
+          }
+
+          .ctrl-btn:hover {
+               background: rgba(0, 0, 0, 0.2);
+          }
+
+          .progress-bar {
+               position: absolute;
+               bottom: 0;
+               left: 0;
+               height: 6px;
+               background: var(--color-accent);
+               width: 0%;
+               transition: width 0.5s ease;
+          }
+
+          /* Animations */
+          .fade-up {
+               animation: fadeUp 1s ease forwards;
+               opacity: 0;
+               transform: translateY(30px);
+          }
+
+          .delay-1 {
+               animation-delay: 0.2s;
+          }
+
+          .delay-2 {
+               animation-delay: 0.4s;
+          }
+
+          .delay-3 {
+               animation-delay: 0.6s;
+          }
+
+          @keyframes fadeUp {
+               to {
+                    opacity: 1;
+                    transform: translateY(0);
+               }
+          }
+     </style>
+</head>
+
+<body>
+
+     <div id="presentation-container">
+
+          <!-- Slide 1: Title -->
+          <div class="slide slide-bg-brand active" id="slide-1">
+               <h2 class="slide-sub fade-up">프리미엄 로컬 푸드 & 라이프스타일 플랫폼</h2>
+               <h1 class="brand-logo-large fade-up delay-1">LOCALeat PAJU</h1>
+               <p class="fade-up delay-2" style="font-size: 1.5rem; font-weight: 300; margin-top: 20px;">자연의 시간이 명품이 되는
+                    곳</p>
+
+               <div class="presenter-info fade-up delay-3">
+                    <p><strong>발표자</strong> 윤성현 대표</p>
+                    <p>2026. 01. 13</p>
+               </div>
+          </div>
+
+          <!-- Slide 2: Problem -->
+          <div class="slide" id="slide-2">
+               <h3 class="section-header">THE PROBLEM</h3>
+               <h1 class="slide-title" style="font-size: 2.5rem; margin-bottom: 50px;">"왜 파주의 농산물은 저평가 받을까요?"</h1>
+
+               <div class="card-container">
+                    <div class="problem-card">
+                         <i class="fas fa-search-dollar problem-icon"></i>
+                         <h4 style="font-size: 1.3rem; margin-bottom: 15px; font-weight:700;">낮은 부가가치</h4>
+                         <p style="color:#666; line-height:1.6;">뛰어난 품질에도 불구하고<br>브랜딩 부재로 도매 시장에<br>단순 원물로 헐값 납품</p>
+                    </div>
+                    <div class="problem-card">
+                         <i class="fas fa-apple-alt problem-icon"></i>
+                         <h4 style="font-size: 1.3rem; margin-bottom: 15px; font-weight:700;">규격화의 함정</h4>
+                         <p style="color:#666; line-height:1.6;">맛과 영양은 똑같지만<br>단지 모양이 조금 다르다는 이유로<br>'못난이'로 분류되어 폐기</p>
+                    </div>
+                    <div class="problem-card">
+                         <i class="fas fa-shopping-cart problem-icon"></i>
+                         <h4 style="font-size: 1.3rem; margin-bottom: 15px; font-weight:700;">단순 판매의 한계</h4>
+                         <p style="color:#666; line-height:1.6;">MZ세대는 단순 '구매'가 아닌<br>'경험'과 '가치'를 소비하지만<br>기존 마켓은 쇼핑
+                              기능에만 집중</p>
+                    </div>
+               </div>
+          </div>
+
+          <!-- Slide 3: Solution -->
+          <div class="slide" id="slide-3">
+               <h3 class="section-header">OUR SOLUTION</h3>
+               <h1 class="slide-title" style="font-size: 2.5rem; margin-bottom: 60px;">농산물(Product)이 아닌 내러티브(Narrative)를
+                    팝니다</h1>
+
+               <div class="solution-contrast">
+                    <div class="solution-box sol-old">
+                         <h4 style="font-size: 1.5rem; margin-bottom: 20px;">기존 로컬푸드</h4>
+                         <ul style="list-style: none; padding: 0; font-size: 1.1rem; line-height: 1.8;">
+                              <li><i class="fas fa-times" style="color:#aaa; margin-right:10px;"></i> 단순 원물 위탁 판매</li>
+                              <li><i class="fas fa-times" style="color:#aaa; margin-right:10px;"></i> 천편일률적인 포장</li>
+                              <li><i class="fas fa-times" style="color:#aaa; margin-right:10px;"></i> 오프라인 중심의 유통</li>
+                         </ul>
+                    </div>
+                    <div class="vs-circle">VS</div>
+                    <div class="solution-box sol-new">
+                         <h4 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--color-accent);">LOCALeat PAJU
+                         </h4>
+                         <ul style="list-style: none; padding: 0; font-size: 1.1rem; line-height: 1.8;">
+                              <li><i class="fas fa-check" style="color:var(--color-accent); margin-right:10px;"></i>
+                                   <strong>Story-Telling Branding</strong></li>
+                              <li><i class="fas fa-check" style="color:var(--color-accent); margin-right:10px;"></i> 농부
+                                   실명제 & 프리미엄 디자인</li>
+                              <li><i class="fas fa-check" style="color:var(--color-accent); margin-right:10px;"></i>
+                                   <strong>Zero-Step</strong> 산지 직송 시스템</li>
+                         </ul>
+                    </div>
+               </div>
+          </div>
+
+          <!-- Slide 4: Differentiation -->
+          <div class="slide" id="slide-4">
+               <h3 class="section-header">KEY FEATURES</h3>
+               <h1 class="slide-title" style="font-size: 2.5rem; margin-bottom: 20px;">기술(Tech)과 경험(Experience)의 융합</h1>
+               <p style="margin-bottom: 60px; font-size: 1.2rem; color: #666;">단순 쇼핑몰을 넘어선 6차 산업 밸류업 플랫폼</p>
+
+               <div class="diff-container">
+                    <div class="diff-item">
+                         <div class="diff-icon-circle"><i class="fas fa-robot"></i></div>
+                         <h4 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 15px;">AI 큐레이션</h4>
+                         <p style="color: #666; line-height: 1.6;">소비자 상황 및 취향 분석<br>맞춤형 상품 & 레시피 추천 솔루션</p>
+                    </div>
+                    <div class="diff-item">
+                         <div class="diff-icon-circle"><i class="fas fa-campground"></i></div>
+                         <h4 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 15px;">오감 만족 체험</h4>
+                         <p style="color: #666; line-height: 1.6;">글램핑, 와이너리 투어, 팜크닉 등<br>체류형 관광 상품 연계</p>
+                    </div>
+                    <div class="diff-item">
+                         <div class="diff-icon-circle"><i class="fas fa-globe-asia"></i></div>
+                         <h4 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 15px;">글로벌 확장</h4>
+                         <p style="color: #666; line-height: 1.6;">K-Food 열풍 대응<br>비건 가공 식품(젤리, 과자) 수출</p>
+                    </div>
+               </div>
+          </div>
+
+          <!-- Slide 5: Tech Stack -->
+          <div class="slide" id="slide-5">
+               <h3 class="section-header">TECHNOLOGY</h3>
+               <h1 class="slide-title" style="font-size: 2.5rem; margin-bottom: 50px;">데이터 기반의 스마트 플랫폼</h1>
+
+               <div class="tech-grid">
+                    <div class="tech-item">
+                         <i class="fas fa-cloud-sun"></i>
+                         <div>
+                              <strong style="font-size: 1.2rem; display: block; margin-bottom: 5px;">Open-Meteo
+                                   API</strong>
+                              <span style="color: #666;">실시간 기상 데이터 연동으로<br>최적의 농작물 생육 정보 제공</span>
+                         </div>
+                    </div>
+                    <div class="tech-item">
+                         <i class="fas fa-chart-line"></i>
+                         <div>
+                              <strong style="font-size: 1.2rem; display: block; margin-bottom: 5px;">KAMIS Data
+                                   Integration</strong>
+                              <span style="color: #666;">aT 농수산물유통정보 연동<br>투명한 실시간 가격 비교 위젯</span>
+                         </div>
+                    </div>
+                    <div class="tech-item">
+                         <i class="fas fa-globe"></i>
+                         <div>
+                              <strong style="font-size: 1.2rem; display: block; margin-bottom: 5px;">Global i18n
+                                   System</strong>
+                              <span style="color: #666;">한/영/일/중 4개국어 완벽 지원<br>실시간 언어 변환 아키텍처</span>
+                         </div>
+                    </div>
+                    <div class="tech-item">
+                         <i class="fas fa-mobile-alt"></i>
+                         <div>
+                              <strong style="font-size: 1.2rem; display: block; margin-bottom: 5px;">Responsive
+                                   Web</strong>
+                              <span style="color: #666;">모든 디바이스 최적화<br>프리미엄 UI/UX 디자인 시스템</span>
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+          <!-- Slide 6: Impact -->
+          <div class="slide" id="slide-6">
+               <h3 class="section-header">EXPECTED IMPACT</h3>
+               <h1 class="slide-title" style="font-size: 3rem; margin-bottom: 60px;">파주의 흙이 세계의 식탁으로</h1>
+
+               <div class="impact-numbers">
+                    <div class="impact-box">
+                         <div class="big-number count-up" data-target="30">0</div>
+                         <div class="big-label">농가 소득 증대 (%)</div>
+                    </div>
+                    <div class="impact-box">
+                         <div class="big-number count-up" data-target="1000">0</div>
+                         <div class="big-label">연간 체험 관광객 (명)</div>
+                    </div>
+                    <div class="impact-box">
+                         <div class="big-number count-up" data-target="5">0</div>
+                         <div class="big-label">수출 국가 확대 (개국)</div>
+                    </div>
+               </div>
+
+               <p style="max-width: 800px; text-align: center; font-size: 1.3rem; line-height: 1.6; color: #444;">
+                    로컬잇파주는 단순한 마켓이 아닙니다.<br>
+                    <strong>지역(Local)과 사람(People)을 잇는 지속 가능한 생태계</strong>입니다.
+               </p>
+          </div>
+
+          <div class="controls">
+               <button class="ctrl-btn" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+               <span
+                    style="display: flex; align-items: center; font-family: var(--font-main); color: #888; font-size: 0.9rem;">
+                    <span id="current-page">1</span> / <span id="total-page">6</span>
+               </span>
+               <button class="ctrl-btn" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+          </div>
+
+          <div class="progress-bar" id="progress-bar"></div>
+
+     </div>
+
+     <script>
+          let currentSlide = 0;
+          const slides = document.querySelectorAll('.slide');
+          const progressBar = document.getElementById('progress-bar');
+          const pageLabel = document.getElementById('current-page');
+          const totalLabel = document.getElementById('total-page');
+
+          totalLabel.innerText = slides.length;
+
+          function showSlide(index) {
+               if (index < 0) index = 0;
+               if (index >= slides.length) index = slides.length - 1;
+
+               currentSlide = index;
+
+               slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === currentSlide) {
+                         slide.classList.add('active');
+                         // Trigger animation reset
+                         const animated = slide.querySelectorAll('.fade-up');
+                         animated.forEach(el => {
+                              el.style.animation = 'none';
+                              el.offsetHeight; /* trigger reflow */
+                              el.style.animation = null;
+                         });
+
+                         // Trigger number count up if slide 6
+                         if (slide.id === 'slide-6') {
+                              runCountUp();
+                         }
+                    }
+               });
+
+               // Update Progress
+               const progress = ((currentSlide + 1) / slides.length) * 100;
+               progressBar.style.width = `${progress}%`;
+               pageLabel.innerText = currentSlide + 1;
+          }
+
+          function nextSlide() {
+               showSlide(currentSlide + 1);
+          }
+
+          function prevSlide() {
+               showSlide(currentSlide - 1);
+          }
+
+          function runCountUp() {
+               const counters = document.querySelectorAll('.count-up');
+               counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    let count = 0;
+                    const speed = target / 50;
+
+                    const updateCount = () => {
+                         count += speed;
+                         if (count < target) {
+                              counter.innerText = Math.ceil(count);
+                              requestAnimationFrame(updateCount);
+                         } else {
+                              counter.innerText = target;
+                              if (target === 30) counter.innerText += "%";
+                              if (target === 5) counter.innerText += "+";
+                         }
+                    };
+                    updateCount();
+               });
+          }
+
+          // Keyboard navigation
+          document.addEventListener('keydown', (e) => {
+               if (e.key === 'ArrowRight' || e.key === 'Space') {
+                    nextSlide();
+               } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+               }
+          });
+
+          // Initialize
+          showSlide(0);
+
+     </script>
+</body>
+
+</html>
