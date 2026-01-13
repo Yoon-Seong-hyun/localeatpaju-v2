@@ -11,7 +11,7 @@ const translations = {
           signup: "회원가입",
           hero_subtitle: "Premium Local Food Market",
           hero_title: "자연의 시간이<br>맛이 되는 곳",
-          hero_desc: "가장 가까운 거리에서 전하는 신선함.<br>오늘 아침 농부의 손길이 당신의 식탁으로 이어집니다.",
+          hero_desc: "새벽 이슬을 머금은 대지의 생명력.<br>오늘 아침 파주의 흙내음이 당신의 식탁 위에 가장 신선한 미식으로 도착합니다.",
           btn_market: "지금 쇼핑하기",
           btn_story: "Brand Story",
           value_tag: "OUR VALUES",
