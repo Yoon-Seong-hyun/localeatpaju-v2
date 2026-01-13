@@ -3,10 +3,10 @@
     "id": "p1",
     "name": "파주 장단콩 (백태) 1kg",
     "price": 18000,
-    "category": "PREMIUM BEAN",
+    "category": "프리미엄 콩",
     "image": "assets/products/jangdan_soybean.png",
     "badges": [
-      "BEST"
+      "베스트"
     ],
     "description": "임금님 수라상에 올랐던 파주의 자랑. 배수가 좋은 마사토에서 자라 맛이 진하고 고소합니다.",
     "farmerId": "f1"
@@ -15,10 +15,10 @@
     "id": "p5",
     "name": "파주 개성인삼 6년근",
     "price": 65000,
-    "category": "PREMIUM ROOT",
+    "category": "프리미엄 인삼",
     "image": "assets/products/paju_ginseng.png",
     "badges": [
-      "ENERGY"
+      "활력충전"
     ],
     "description": "고려인삼의 맥을 잇는 6년근 파주 인삼. DMZ의 청정 자연이 키운 면역력의 결정체입니다.",
     "farmerId": "f2"
@@ -27,10 +27,10 @@
     "id": "p6",
     "name": "임진강 한수위 쌀 10kg",
     "price": 42000,
-    "category": "PREMIUM RICE",
+    "category": "프리미엄 쌀",
     "image": "assets/products/hansuwi_rice.png",
     "badges": [
-      "DAILY"
+      "데일리"
     ],
     "description": "임진강의 맑은 물과 비옥한 토양이 키운 명품 쌀. 밥만 먹어도 달다는 말이 절로 나옵니다.",
     "farmerId": "f3"
@@ -39,10 +39,10 @@
     "id": "p7",
     "name": "감악산 야생 칡즙 (30포)",
     "price": 35000,
-    "category": "WILD NATURE",
+    "category": "자연산",
     "image": "assets/products/gamaksan_herbs.png",
     "badges": [
-      "WILD"
+      "야생"
     ],
     "description": "사람의 손이 닿지 않은 감악산 야생 칡의 생명력. 숙취 해소와 이너뷰티를 위한 숲의 선물.",
     "farmerId": "f4"
@@ -51,10 +51,10 @@
     "id": "p8",
     "name": "파주 장단 마 (둥근마) 5kg",
     "price": 48000,
-    "category": "ROOT VEG",
+    "category": "뿌리 채소",
     "image": "assets/products/jangdan_yam.png",
     "badges": [
-      "STOMACH CARE"
+      "위장 보호"
     ],
     "description": "임진강 모래흙이 키워 속이 꽉 찬 마. 위장을 보호하는 당신의 아침 친구입니다.",
     "farmerId": "f5"
@@ -63,10 +63,10 @@
     "id": "p3",
     "name": "파주 산머루 와인 Premium",
     "price": 32000,
-    "category": "LOCAL WINE",
+    "category": "로컬 와인",
     "image": "assets/products/sanmeoru_wine.png",
     "badges": [
-      "GIFT"
+      "선물용"
     ],
     "description": "파주의 높은 일교차가 만든 달콤한 산머루로 빚은 와인. 감악산 터널 숙성으로 깊은 풍미를 자랑합니다.",
     "farmerId": "f6"
@@ -75,10 +75,10 @@
     "id": "c1",
     "name": "장단콩 비건 크림 롤케이크",
     "price": 18500,
-    "category": "VEGAN DESSERT",
+    "category": "비건 디저트",
     "image": "assets/products/bean_roll_cake.png",
     "badges": [
-      "VEGAN"
+      "비건"
     ],
     "description": "[서울 추천] 우유 대신 고소한 장단콩 크림을 가득 채운 글루텐프리 디저트. 속 편한 달콤함.",
     "farmerId": "f7"
@@ -87,10 +87,10 @@
     "id": "c2",
     "name": "DMZ 모닝 쉐이크 (마+콩)",
     "price": 29000,
-    "category": "MORNING ROUTINE",
+    "category": "모닝 루틴",
     "image": "assets/products/morning_shake.png",
     "badges": [
-      "DAILY"
+      "데일리"
     ],
     "description": "바쁜 아침, 위장을 감싸주는 DMZ 한 모금. 장단콩의 고소함이 마의 식감을 부드럽게 감싸줍니다.",
     "farmerId": "f8"
@@ -99,10 +99,10 @@
     "id": "c5",
     "name": "애플 소이 약과 (Apple Soy)",
     "price": 12000,
-    "category": "TRENDY SNACK",
+    "category": "인기 간식",
     "image": "assets/products/apple_yakgwa.png",
     "badges": [
-      "TRENDY"
+      "트렌디"
     ],
     "description": "파주 사과 조청의 달콤함과 장단콩의 고소함이 만난 퓨전 약과. 할매니얼 입맛 저격!",
     "farmerId": "f9"
@@ -111,11 +111,11 @@
     "id": "e1",
     "name": "삼오팜 딸기 수확 & 디저트 체험",
     "price": 25000,
-    "category": "STRAWBERRY FARM",
+    "category": "딸기 농장",
     "image": "assets/images/strawberry_farm_experience.png",
     "badges": [
-      "FAMILY",
-      "BEST"
+      "가족",
+      "베스트"
     ],
     "description": "3.5kg 딸기 수확 + 딸기 아이스크림 만들기! 아이들이 가장 좋아하는 겨울 필수 코스입니다.",
     "farmerId": "f10"
@@ -124,10 +124,10 @@
     "id": "e2",
     "name": "동화힐링캠프 별밤 글램핑 (1박)",
     "price": 150000,
-    "category": "CAMPING",
+    "category": "캠핑",
     "image": "assets/images/starlight_camping.png",
     "badges": [
-      "RESERVATION"
+      "예약 필수"
     ],
     "description": "장비 없이 떠나는 산속 힐링. 쏟아지는 별빛 아래, 모닥불과 함께하는 낭만적인 하룻밤.",
     "farmerId": "f11"
@@ -136,10 +136,10 @@
     "id": "e3",
     "name": "고구려목장 치즈 피자 만들기",
     "price": 30000,
-    "category": "DAIRY FARM",
+    "category": "낙농 체험",
     "image": "assets/images/cheese_making_experience.png",
     "badges": [
-      "KIDS"
+      "어린이"
     ],
     "description": "송아지 우유 주기부터 자연 치즈로 피자 만들기까지! 직접 만든 피자로 맛있는 점심을 즐기세요.",
     "farmerId": "f12"
@@ -148,10 +148,10 @@
     "id": "e4",
     "name": "산머루마을 와이너리 투어",
     "price": 20000,
-    "category": "WINERY TOUR",
+    "category": "와이너리 투어",
     "image": "assets/products/sanmeoru_wine.png",
     "badges": [
-      "COUPLE"
+      "커플"
     ],
     "description": "신비로운 지하 와인 터널 투어와 나만의 머루 와인 만들기. 연인들의 데이트 코스로 추천합니다.",
     "farmerId": "f13"
@@ -160,11 +160,11 @@
     "id": "cp1",
     "name": "더시크릿가든 캠핑장",
     "price": 60000,
-    "category": "CAMPING",
+    "category": "캠핑",
     "image": "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80",
     "badges": [
-      "COUPLE",
-      "POOL"
+      "커플",
+      "수영장"
     ],
     "description": "감성적인 분위기의 캠핑장. 개별 바비큐장, 수영장, 감성 카페가 있어 커플 여행에 최적입니다.",
     "farmerId": "cp1"
@@ -173,11 +173,11 @@
     "id": "cp2",
     "name": "벽초지수목원 캠핑장",
     "price": 50000,
-    "category": "CAMPING",
+    "category": "캠핑",
     "image": "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=800&q=80",
     "badges": [
-      "PET",
-      "NATURE"
+      "반려동물",
+      "자연"
     ],
     "description": "수목원 내에 위치하여 자연 친화적입니다. 반려견 동반이 가능해 온 가족이 함께할 수 있습니다.",
     "farmerId": "cp2"
@@ -186,11 +186,11 @@
     "id": "cp3",
     "name": "감악산 캠핑장",
     "price": 40000,
-    "category": "CAMPING",
+    "category": "캠핑",
     "image": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80",
     "badges": [
-      "VALLEY",
-      "SUMMER"
+      "계곡",
+      "여름"
     ],
     "description": "계곡 바로 옆에 위치해 여름철 물놀이에 제격입니다. 무료 샤워실과 바비큐장을 갖췄습니다.",
     "farmerId": "cp3"
@@ -199,11 +199,11 @@
     "id": "cp4",
     "name": "평화누리캠핑장",
     "price": 30000,
-    "category": "CAMPING",
+    "category": "캠핑",
     "image": "https://images.unsplash.com/photo-1537905569824-f89f14cceb68?auto=format&fit=crop&w=800&q=80",
     "badges": [
-      "QUIET",
-      "SPACIOUS"
+      "조용한",
+      "넓은 공간"
     ],
     "description": "넓은 사이트와 한적한 분위기. 조용한 휴식을 원하는 캠퍼들에게 추천하는 평화루니 캠핑장.",
     "farmerId": "cp4"
@@ -212,11 +212,11 @@
     "id": "cp5",
     "name": "DMZ 캠핑장",
     "price": 35000,
-    "category": "CAMPING",
+    "category": "캠핑",
     "image": "https://images.unsplash.com/photo-1496545672479-7ac37ea8a0ea?auto=format&fit=crop&w=800&q=80",
     "badges": [
-      "UNIQUE",
-      "HISTORY"
+      "이색체험",
+      "역사"
     ],
     "description": "DMZ 인근에서 즐기는 특별한 캠핑. 안보 관광과 함께 전통 텐트 체험이 가능합니다.",
     "farmerId": "cp5"
@@ -225,11 +225,11 @@
     "id": "cp6",
     "name": "파주 글램핑 빌리지",
     "price": 80000,
-    "category": "GLAMPING",
+    "category": "글램핑",
     "image": "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=800&q=80",
     "badges": [
-      "LUXURY",
-      "EASY"
+      "럭셔리",
+      "편리함"
     ],
     "description": "럭셔리한 글램핑 시설과 개별 화장실 완비. 장비 없는 초보자도 호텔처럼 편하게 즐기세요.",
     "farmerId": "cp6"
@@ -238,11 +238,11 @@
     "id": "cp7",
     "name": "오토캠핑숲",
     "price": 50000,
-    "category": "AUTOCAMP",
+    "category": "오토캠핑",
     "image": "https://images.unsplash.com/photo-1526491109672-74740652028d?auto=format&fit=crop&w=800&q=80",
     "badges": [
-      "CAR",
-      "POOL"
+      "차박",
+      "수영장"
     ],
     "description": "대형 오토캠핑 구역과 수영장을 갖춘 곳. 차박과 물놀이를 동시에 즐기고 싶은 분들께 추천.",
     "farmerId": "cp7"
