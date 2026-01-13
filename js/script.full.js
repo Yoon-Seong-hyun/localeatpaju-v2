@@ -699,7 +699,7 @@ async function getProducts() {
                     "name": "시크릿가든 캠핑장",
                     "price": 60000,
                     "category": "CAMPING",
-                    "image": "assets/images/korean_camping_bbq_closeup.png?v=20260113",
+                    "image": "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80",
                     "badges": ["프라이빗", "수영장"],
                     "description": "감악산 자락에 위치한 프라이빗 캠핑장. 개별 바베큐장과 수영장, 감성 카페를 갖춘 럭셔리 휴양지.",
                     "trans": {
@@ -713,7 +713,7 @@ async function getProducts() {
                     "name": "벽초지수목원 캠핑장",
                     "price": 50000,
                     "category": "CAMPING",
-                    "image": "assets/images/korean_garden_camping.png",
+                    "image": "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=800&q=80",
                     "badges": ["식물원뷰", "반려동물"],
                     "description": "수목원 내에 위치해 완벽한 숲캉스를 즐길 수 있습니다. 반려동물 동반이 가능해 온 가족이 행복한 시간을 보낼 수 있습니다.",
                     "trans": {
@@ -727,7 +727,7 @@ async function getProducts() {
                     "name": "감악산 캠핑장",
                     "price": 40000,
                     "category": "CAMPING",
-                    "image": "assets/images/korean_camping_valley_v2.png?v=20260113",
+                    "image": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80",
                     "badges": ["계곡물놀이", "샤워장"],
                     "description": "계곡 바로 옆에 있어 여름철 물놀이에 최적화된 곳. 깨끗한 샤워시설과 바베큐장이 준비되어 있습니다.",
                     "trans": {
@@ -741,7 +741,7 @@ async function getProducts() {
                     "name": "평화누리 캠핑장",
                     "price": 30000,
                     "category": "CAMPING",
-                    "image": "assets/images/korean_camping_park_v2.png?v=20260113",
+                    "image": "https://images.unsplash.com/photo-1537905569824-f89f14cceb68?auto=format&fit=crop&w=800&q=80",
                     "badges": ["넓은공간", "조용한"],
                     "description": "평화 누리 공원의 넓은 잔디밭에서 즐기는 여유로운 캠핑. 탁 트인 시야와 조용한 휴식을 원하는 캠퍼들에게 추천.",
                     "trans": {
@@ -755,7 +755,7 @@ async function getProducts() {
                     "name": "DMZ 캠핑장",
                     "price": 35000,
                     "category": "CAMPING",
-                    "image": "assets/images/dmz_global_camping.png",
+                    "image": "https://images.unsplash.com/photo-1496545672479-7ac37ea8a0ea?auto=format&fit=crop&w=800&q=80",
                     "badges": ["안보관광", "텐트대여"],
                     "description": "DMZ 접경 지역에서 즐기는 이색적인 캠핑. 안보 관광과 함께 특별한 추억을 만들 수 있습니다.",
                     "trans": {
@@ -769,7 +769,7 @@ async function getProducts() {
                     "name": "파주 글램핑 빌리지",
                     "price": 80000,
                     "category": "GLAMPING",
-                    "image": "assets/images/korean_luxury_glamping.png",
+                    "image": "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=800&q=80",
                     "badges": ["호텔식", "개별화장실"],
                     "description": "호텔식 침구와 개별 화장실을 갖춘 럭셔리 글램핑. 텐트가 없어도, 캠핑 장비가 없어도 누구나 즐길 수 있습니다.",
                     "trans": {
@@ -783,7 +783,7 @@ async function getProducts() {
                     "name": "오토 캠핑 숲",
                     "price": 50000,
                     "category": "AUTOCAMP",
-                    "image": "assets/images/korean_car_camping.png",
+                    "image": "https://images.unsplash.com/photo-1526491109672-74740652028d?auto=format&fit=crop&w=800&q=80",
                     "badges": ["차박가능", "수영장"],
                     "description": "넓은 오토 캠핑 사이트와 수영장을 갖춘 숲속 캠핑장. 차박을 즐기는 분들에게 최적화된 공간입니다.",
                     "trans": {

@@ -161,7 +161,7 @@
     "name": "더시크릿가든 캠핑장",
     "price": 60000,
     "category": "CAMPING",
-    "image": "assets/images/starlight_camping.png",
+    "image": "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80",
     "badges": [
       "COUPLE",
       "POOL"
@@ -174,7 +174,7 @@
     "name": "벽초지수목원 캠핑장",
     "price": 50000,
     "category": "CAMPING",
-    "image": "assets/images/starlight_camping.png",
+    "image": "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=800&q=80",
     "badges": [
       "PET",
       "NATURE"
@@ -187,7 +187,7 @@
     "name": "감악산 캠핑장",
     "price": 40000,
     "category": "CAMPING",
-    "image": "assets/images/starlight_camping.png",
+    "image": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80",
     "badges": [
       "VALLEY",
       "SUMMER"
@@ -200,7 +200,7 @@
     "name": "평화누리캠핑장",
     "price": 30000,
     "category": "CAMPING",
-    "image": "assets/images/starlight_camping.png",
+    "image": "https://images.unsplash.com/photo-1537905569824-f89f14cceb68?auto=format&fit=crop&w=800&q=80",
     "badges": [
       "QUIET",
       "SPACIOUS"
@@ -213,7 +213,7 @@
     "name": "DMZ 캠핑장",
     "price": 35000,
     "category": "CAMPING",
-    "image": "assets/images/starlight_camping.png",
+    "image": "https://images.unsplash.com/photo-1496545672479-7ac37ea8a0ea?auto=format&fit=crop&w=800&q=80",
     "badges": [
       "UNIQUE",
       "HISTORY"
@@ -226,7 +226,7 @@
     "name": "파주 글램핑 빌리지",
     "price": 80000,
     "category": "GLAMPING",
-    "image": "assets/images/starlight_camping.png",
+    "image": "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=800&q=80",
     "badges": [
       "LUXURY",
       "EASY"
@@ -239,7 +239,7 @@
     "name": "오토캠핑숲",
     "price": 50000,
     "category": "AUTOCAMP",
-    "image": "assets/images/starlight_camping.png",
+    "image": "https://images.unsplash.com/photo-1526491109672-74740652028d?auto=format&fit=crop&w=800&q=80",
     "badges": [
       "CAR",
       "POOL"
