@@ -71,7 +71,7 @@ const translations = {
           footer_link_terms: "이용약관",
           footer_link_privacy: "개인정보처리방침",
           footer_link_inquiry: "입점/제휴 문의",
-          footer_info: "경기도 파주시 평화로 123 (문산읍) 1층 | 대표: 김파주<br>사업자등록번호: 000-00-00000 | 통신판매업신고: 2024-파주-0000<br>COPYRIGHT © 2024 LOCALeatPAJU. ALL RIGHTS RESERVED.",
+          footer_info: "경기도 파주시 평화로 123 (문산읍) 1층 | 대표: 윤성현<br>사업자등록번호: 000-00-00000 | 통신판매업신고: 2024-파주-0000<br>COPYRIGHT © 2024 LOCALeatPAJU. ALL RIGHTS RESERVED.",
           ai_title: "당신의 취향을 읽는<br>프라이빗 푸드 컨시어지",
           ai_desc: "오늘의 기분과 취향에 가장 어울리는 파주의 맛을 제안합니다.<br>당신만을 위한 미식 큐레이션을 경험해 보세요.",
           ai_tab_chef: "장바구니 셰프",
