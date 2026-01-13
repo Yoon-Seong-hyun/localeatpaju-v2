@@ -46,7 +46,7 @@ const translations = {
           exp_desc: "단순한 소비가 아닌, 삶의 영감이 되는 로컬 여행.<br>소중한 사람과 함께 파주의 깊은 매력을 향유하세요.",
           farmer_tag: "파주의 땅에 내일의 씨앗을 심는 사람들",
           farmer_title: "\"나보다 못난이라도 괜찮아,<br>농약은 안먹고 자랐으니까..\"",
-          farmer_desc: "전통의 지혜 위에 청년의 열정을 더하다. 새로운 시각으로 파주 농업의 미래를 경작하는 영 파머스(Young Farmers)의 이야기.",
+          farmer_desc: "매끈하지 않아도 괜찮습니다. 자연이 허락한 모습 그대로니까요. 한 입 베어 물면 퍼지는 짙은 향기, 그것은 인위적인 손길이 닿지 않았다는 가장 확실한 증거입니다.",
           farmer_btn_interview: "인터뷰 전문 보기",
           farmer_btn_buy: "못난이 사과 구매하기",
           export_tag: "K-WELLNESS GLOBAL PROJECT",
