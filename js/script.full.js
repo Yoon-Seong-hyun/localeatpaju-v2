@@ -1461,6 +1461,8 @@ document.addEventListener('DOMContentLoaded', async () => {
      const savedLang = localStorage.getItem('preferredLang');
      if (savedLang && translations[savedLang]) {
           changeLanguage(savedLang);
+     } else {
+          changeLanguage('ko');
      }
 
      // Initial Fetch and Render
