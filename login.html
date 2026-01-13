@@ -1,127 +1,84 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그인 | 로컬잇파주</title>
-    <link rel="stylesheet" href="styles.css">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>로그인 - 로컬잇파주</title>
+     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-top">
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo.svg" alt="LOCALeatPAJU 로고" class="logo-image">
-            </a>
-            <div class="header-buttons">
-                <div class="nav-weather">☀️ 파주: 15°C (미세먼지: 좋음)</div>
-                <a href="login.html" class="btn-login">로그인</a>
-                <a href="signup.html" class="btn-signup">회원가입</a>
-            </div>
-            <button class="hamburger-menu" aria-label="메뉴 열기">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        <nav class="navigation">
-            <ul class="nav-menu">
-                <li><a href="about.html">소개</a></li>
-                <li><a href="farmers.html">농부 이야기</a></li>
-                <li><a href="farmer-log.html">농부의 일지</a></li>
-                <li><a href="products.html">지금 만나는 작물</a></li>
-                <li><a href="experiences.html">농장 체험</a></li>
-                <li><a href="campsites.html">별밤 캠핑</a></li>
-                <li><a href="farewell-paju.html">떠나는 명소</a></li>
-                <li><a href="community.html">커뮤니티</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Login Page Section -->
-    <section class="auth-page-section">
-        <div class="container">
-            <div class="auth-container">
-                <h1 class="auth-page-title">로그인</h1>
-                
-                <form class="auth-form" id="login-form">
-                    <div class="form-group">
-                        <label for="login-email" class="form-label">이메일</label>
-                        <input type="email" id="login-email" name="email" class="form-input" placeholder="이메일을 입력하세요" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="login-password" class="form-label">비밀번호</label>
-                        <input type="password" id="login-password" name="password" class="form-input" placeholder="비밀번호를 입력하세요" required>
-                    </div>
-                    
-                    <div class="form-group checkbox-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="remember-me" name="remember-me" class="checkbox-input">
-                            <span class="checkbox-text">로그인 상태 유지</span>
-                        </label>
-                    </div>
-                    
-                    <button type="submit" class="btn-auth-primary">로그인</button>
-                    
-                    <div class="auth-links">
-                        <a href="#" class="auth-link">아이디/비밀번호 찾기</a>
-                    </div>
-                    
-                    <div class="auth-divider">
-                        <span class="divider-text">또는</span>
-                    </div>
-                    
-                    <div class="sns-login-buttons">
-                        <button type="button" class="btn-sns btn-kakao">
-                            <span class="sns-icon">카카오</span>
-                            카카오로 로그인
-                        </button>
-                        <button type="button" class="btn-sns btn-naver">
-                            <span class="sns-icon">네이버</span>
-                            네이버로 로그인
-                        </button>
-                    </div>
-                    
-                    <div class="auth-signup-link">
-                        <span>아직 회원이 아니신가요? </span>
-                        <a href="signup.html" class="signup-link">회원가입</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
+<body class="flex items-center justify-center" style="min-height: 100vh; background-color: #f3f4f6;">
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="#terms">이용약관</a>
-                    <a href="#privacy">개인정보처리방침</a>
-                    <a href="#support">고객센터</a>
-                </div>
-                <div class="footer-info">
-                    <p>로컬잇파주 (LOCAEATPAJU)</p>
-                    <p>주소: 경기도 파주시 농부로 123</p>
-                    <p>이메일: contact@locaeatpaju.kr</p>
-                    <p>전화: 031-123-4567</p>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <p>&copy; 2024 로컬잇파주. All rights reserved.</p>
-            </div>
-        </div>
-        <!-- Version Toggle (모바일 전용) -->
-        <div class="version-toggle">
-            <a href="?view=desktop" class="version-link" id="desktop-view-link">PC 버전</a>
-            <span class="version-divider">|</span>
-            <a href="?view=mobile" class="version-link" id="mobile-view-link">모바일 버전</a>
-        </div>
-    </footer>
+     <div class="card" style="width: 100%; max-width: 400px; padding: 40px;">
+          <div style="text-align: center; margin-bottom: 30px;">
+               <a href="index.html"
+                    style="color: var(--color-primary); font-weight: 800; font-size: 1.5rem;">LOCALeatPAJU</a>
+               <h2 style="font-size: 1.5rem; margin-top: 10px;">로그인</h2>
+          </div>
 
-    <script src="script.js"></script>
-    <script src="auth.js"></script>
+          <form id="login-form">
+               <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">이메일</label>
+                    <input type="email" required
+                         style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"
+                         placeholder="example@email.com">
+               </div>
+               <div style="margin-bottom: 30px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">비밀번호</label>
+                    <input type="password" required
+                         style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"
+                         placeholder="••••••••">
+               </div>
+               <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 12px;">로그인</button>
+               <button type="button" class="btn"
+                    style="width: 100%; background: white; border: 1px solid #ddd; color: #333; display: flex; align-items: center; justify-content: center; gap: 8px;"
+                    onclick="googleLogin()">
+                    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google"
+                         style="width: 18px;">
+                    Google로 계속하기
+               </button>
+          </form>
+
+          <div style="margin-top: 20px; text-align: center; font-size: 0.875rem; color: var(--color-text-sub);">
+               아직 회원이 아니신가요? <a href="signup.html" style="color: var(--color-primary); font-weight: 600;">회원가입</a>
+          </div>
+     </div>
+
+     <script>
+          // Standard Email Login
+          document.getElementById('login-form').addEventListener('submit', (e) => {
+               e.preventDefault();
+               const btn = e.target.querySelector('button[type="submit"]');
+               btn.innerText = '로그인 중...';
+               btn.disabled = true;
+
+               setTimeout(() => {
+                    // Save Mock User
+                    const user = {
+                         name: '김파주',
+                         email: e.target.querySelector('input[type="email"]').value,
+                         type: 'email'
+                    };
+                    localStorage.setItem('localeat_user', JSON.stringify(user));
+
+                    alert('로그인되었습니다.');
+                    window.location.href = 'index.html';
+               }, 1000);
+          });
+
+          // Google Login Simulation
+          function googleLogin() {
+               const user = {
+                    name: 'Google User',
+                    email: 'user@gmail.com',
+                    type: 'google'
+               };
+               localStorage.setItem('localeat_user', JSON.stringify(user));
+               alert('Google 계정으로 로그인되었습니다.');
+               window.location.href = 'index.html';
+          }
+     </script>
 </body>
-</html>
 
+</html>

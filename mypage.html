@@ -1,225 +1,108 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>마이페이지 | 로컬잇파주</title>
-    <link rel="stylesheet" href="styles.css">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>마이페이지 - 로컬잇파주</title>
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-top">
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo.svg" alt="LOCALeatPAJU 로고" class="logo-image">
-            </a>
-            <div class="header-buttons">
-                <div class="nav-weather">☀️ 파주: 15°C (미세먼지: 좋음)</div>
-                <a href="login.html" class="btn-login">로그인</a>
-                <a href="signup.html" class="btn-signup">회원가입</a>
-            </div>
-            <button class="hamburger-menu" aria-label="메뉴 열기">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        <nav class="navigation">
-            <ul class="nav-menu">
-                <li><a href="about.html">소개</a></li>
-                <li><a href="farmers.html">농부 이야기</a></li>
-                <li><a href="farmer-log.html">농부의 일지</a></li>
-                <li><a href="products.html">지금 만나는 작물</a></li>
-                <li><a href="experiences.html">농장 체험</a></li>
-                <li><a href="campsites.html">별밤 캠핑</a></li>
-                <li><a href="farewell-paju.html">떠나는 명소</a></li>
-                <li><a href="community.html">커뮤니티</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- MyPage Section -->
-    <section class="mypage-section">
-        <div class="container">
-            <h1 class="mypage-title">마이페이지</h1>
-            
-            <div class="mypage-layout">
-                <!-- Sidebar (Left Column) -->
-                <aside class="mypage-sidebar">
-                    <div class="welcome-message">
-                        <p class="welcome-text">도시소비자 님, 환영합니다!</p>
-                    </div>
-                    <nav class="sidebar-nav">
-                        <ul class="sidebar-menu">
-                            <li>
-                                <a href="#" class="sidebar-link active" data-content="orders">주문 내역</a>
-                            </li>
-                            <li>
-                                <a href="#" class="sidebar-link" data-content="profile">회원 정보 수정</a>
-                            </li>
-                            <li>
-                                <a href="#" class="sidebar-link" data-content="posts">내가 쓴 글</a>
-                            </li>
-                            <li>
-                                <a href="#" class="sidebar-link logout">로그아웃</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </aside>
+<body style="background-color: #f9f9f9;">
 
-                <!-- Content Area (Right Column) -->
-                <main class="mypage-content">
-                    <!-- Content 1: 주문 내역 (Default) -->
-                    <div class="content-panel active" id="orders">
-                        <h3 class="content-title">주문 내역</h3>
-                        <div class="orders-table-wrapper">
-                            <table class="orders-table">
-                                <thead>
-                                    <tr>
-                                        <th class="col-order-date">주문 날짜</th>
-                                        <th class="col-order-number">주문 번호</th>
-                                        <th class="col-product-name">상품명</th>
-                                        <th class="col-payment-amount">결제 금액</th>
-                                        <th class="col-delivery-status">배송 상태</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="col-order-date">2025.11.14</td>
-                                        <td class="col-order-number">20251114-001</td>
-                                        <td class="col-product-name">파주 꿀 고구마 외 1건</td>
-                                        <td class="col-payment-amount">33,000원</td>
-                                        <td class="col-delivery-status">
-                                            <span class="status-badge preparing">배송 준비 중</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="col-order-date">2025.11.10</td>
-                                        <td class="col-order-number">20251110-002</td>
-                                        <td class="col-product-name">파주 유기농 토마토</td>
-                                        <td class="col-payment-amount">15,000원</td>
-                                        <td class="col-delivery-status">
-                                            <span class="status-badge delivered">배송 완료</span>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+     <!-- Simple Header -->
+     <header class="header" style="background: white; border-bottom: 1px solid #eee; position: relative;">
+          <div class="container flex justify-between items-center" style="height: 80px;">
+               <a href="index.html" class="logo">
+                    <h3
+                         style="color: var(--color-primary); font-weight: 800; font-family: 'Poppins', sans-serif; font-size: 1.5rem;">
+                         LOCAL<span style="color: #d32f2f;">e</span><span style="color: #f57f17;">a</span><span
+                              style="color: #fbc02d;">t</span>PAJU
+                    </h3>
+               </a>
+               <nav class="nav-menu flex gap-lg items-center">
+                    <a href="index.html" class="nav-link">홈으로 돌아가기</a>
+               </nav>
+          </div>
+     </header>
 
-                    <!-- Content 2: 회원 정보 수정 (Hidden) -->
-                    <div class="content-panel" id="profile">
-                        <h3 class="content-title">회원 정보 수정</h3>
-                        <form class="profile-form" id="profile-form">
-                            <div class="form-group">
-                                <label for="profile-email" class="form-label">이메일</label>
-                                <input type="email" id="profile-email" name="email" class="form-input" value="user@example.com" readonly>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="profile-name" class="form-label">이름</label>
-                                <input type="text" id="profile-name" name="name" class="form-input" value="도시소비자" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="profile-current-password" class="form-label">현재 비밀번호</label>
-                                <input type="password" id="profile-current-password" name="current-password" class="form-input" placeholder="현재 비밀번호를 입력하세요">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="profile-new-password" class="form-label">새 비밀번호</label>
-                                <input type="password" id="profile-new-password" name="new-password" class="form-input" placeholder="새 비밀번호를 입력하세요">
-                                <p class="form-help-text">8자 이상, 영문/숫자 조합</p>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="profile-new-password-confirm" class="form-label">새 비밀번호 확인</label>
-                                <input type="password" id="profile-new-password-confirm" name="new-password-confirm" class="form-input" placeholder="새 비밀번호를 다시 입력하세요">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="profile-postal-code" class="form-label">주소</label>
-                                <div class="address-input-group">
-                                    <input type="text" id="profile-postal-code" name="postal-code" class="form-input postal-code-input" placeholder="우편번호" readonly>
-                                    <button type="button" class="btn-find-address" onclick="findAddress()">우편번호 찾기</button>
-                                </div>
-                                <input type="text" id="profile-address-base" name="address-base" class="form-input address-input" placeholder="기본주소" readonly>
-                                <input type="text" id="profile-address-detail" name="address-detail" class="form-input address-input" placeholder="상세주소를 입력하세요">
-                            </div>
-                            
-                            <button type="submit" class="btn-update-profile">수정하기</button>
-                        </form>
-                    </div>
+     <div class="container" style="padding: 60px 0;">
+          <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 40px;">마이페이지</h2>
 
-                    <!-- Content 3: 내가 쓴 글 (Hidden) -->
-                    <div class="content-panel" id="posts">
-                        <h3 class="content-title">내가 쓴 글</h3>
-                        <div class="my-posts-table-wrapper">
-                            <table class="my-posts-table">
-                                <thead>
-                                    <tr>
-                                        <th class="col-category">카테고리</th>
-                                        <th class="col-title">제목</th>
-                                        <th class="col-date">작성일</th>
-                                        <th class="col-views">조회수</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="col-category"><span class="category-badge recipe">레시피</span></td>
-                                        <td class="col-title">
-                                            <a href="community-post.html" class="post-title-link">파주 쌀로 만든 꿀맛 식혜</a>
-                                        </td>
-                                        <td class="col-date">2025.11.15</td>
-                                        <td class="col-views">102</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="col-category"><span class="category-badge free">자유게시판</span></td>
-                                        <td class="col-title">
-                                            <a href="community-post.html" class="post-title-link">파주 유기농 토마토 너무 맛있어요!</a>
-                                        </td>
-                                        <td class="col-date">2025.11.13</td>
-                                        <td class="col-views">89</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </main>
-            </div>
-        </div>
-    </section>
+          <div class="grid" style="display: grid; grid-template-columns: 250px 1fr; gap: 40px;">
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="#terms">이용약관</a>
-                    <a href="#privacy">개인정보처리방침</a>
-                    <a href="#support">고객센터</a>
-                </div>
-                <div class="footer-info">
-                    <p>로컬잇파주 (LOCAEATPAJU)</p>
-                    <p>주소: 경기도 파주시 농부로 123</p>
-                    <p>이메일: contact@locaeatpaju.kr</p>
-                    <p>전화: 031-123-4567</p>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <p>&copy; 2024 로컬잇파주. All rights reserved.</p>
-            </div>
-        </div>
-        <!-- Version Toggle (모바일 전용) -->
-        <div class="version-toggle">
-            <a href="?view=desktop" class="version-link" id="desktop-view-link">PC 버전</a>
-            <span class="version-divider">|</span>
-            <a href="?view=mobile" class="version-link" id="mobile-view-link">모바일 버전</a>
-        </div>
-    </footer>
+               <!-- Sidebar -->
+               <div
+                    style="background: white; padding: 20px; border-radius: 12px; height: fit-content; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                    <ul style="list-style: none; padding: 0;">
+                         <li style="margin-bottom: 15px;"><a href="#"
+                                   style="font-weight: 700; color: var(--color-primary);">내 정보 관리</a></li>
+                         <li style="margin-bottom: 15px;"><a href="#" style="color: #666;">주문 내역</a></li>
+                         <li style="margin-bottom: 15px;"><a href="#" style="color: #666;">찜한 목록</a></li>
+                         <li><a href="#" onclick="logout()" style="color: #d32f2f;">로그아웃</a></li>
+                    </ul>
+               </div>
 
-    <script src="script.js"></script>
-    <script src="mypage.js"></script>
+               <!-- Content -->
+               <div
+                    style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                    <h3
+                         style="font-size: 1.2rem; margin-bottom: 30px; border-bottom: 2px solid #eee; padding-bottom: 15px;">
+                         기본 정보</h3>
+
+                    <form id="profile-form">
+                         <div style="margin-bottom: 20px;">
+                              <label
+                                   style="display: block; margin-bottom: 8px; font-weight: 500; color: #555;">이름</label>
+                              <input type="text" id="user-name" value=""
+                                   style="width: 100%; max-width: 400px; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                         </div>
+                         <div style="margin-bottom: 20px;">
+                              <label
+                                   style="display: block; margin-bottom: 8px; font-weight: 500; color: #555;">이메일</label>
+                              <input type="email" id="user-email" value="" readonly disabled
+                                   style="width: 100%; max-width: 400px; padding: 12px; border: 1px solid #eee; border-radius: 8px; background: #f5f5f5; color: #999;">
+                         </div>
+                         <div style="margin-bottom: 30px;">
+                              <label style="display: block; margin-bottom: 8px; font-weight: 500; color: #555;">계정
+                                   유형</label>
+                              <span id="user-type"
+                                   style="padding: 4px 12px; background: #e3f2fd; color: #1565c0; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Email</span>
+                         </div>
+
+                         <button type="button" onclick="saveProfile()" class="btn btn-primary">변경사항 저장</button>
+                    </form>
+               </div>
+          </div>
+     </div>
+
+     <script>
+          // Check Auth
+          const userStr = localStorage.getItem('localeat_user');
+          if (!userStr) {
+               alert('로그인이 필요합니다.');
+               window.location.href = 'login.html';
+          }
+
+          const user = JSON.parse(userStr);
+          document.getElementById('user-name').value = user.name;
+          document.getElementById('user-email').value = user.email;
+          document.getElementById('user-type').innerText = user.type === 'google' ? 'Google 계정' : '일반 계정';
+
+          function saveProfile() {
+               const newName = document.getElementById('user-name').value;
+               user.name = newName;
+               localStorage.setItem('localeat_user', JSON.stringify(user));
+               alert('정보가 수정되었습니다.');
+          }
+
+          function logout() {
+               localStorage.removeItem('localeat_user');
+               alert('로그아웃 되었습니다.');
+               window.location.href = 'index.html';
+          }
+     </script>
 </body>
-</html>
 
+</html>
